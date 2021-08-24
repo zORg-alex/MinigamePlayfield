@@ -771,6 +771,194 @@ public class @InputActions : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""QTE"",
+            ""id"": ""04f52f8a-cb32-4bdf-9764-0c3feaf5132d"",
+            ""actions"": [
+                {
+                    ""name"": ""Click"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""30a7dfbf-7784-4db2-9caa-26ba9f5deb05"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ClickAlt"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""0b033b42-0420-4317-a76e-87b9d30111d3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""West"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""929e8faa-4cc7-42af-8065-f5b0507a136c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""East"",
+                    ""type"": ""Button"",
+                    ""id"": ""4152b09b-8844-4249-ba45-1e9ff82864ab"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""North"",
+                    ""type"": ""Button"",
+                    ""id"": ""d37df7ff-44d6-4e90-9117-ff356761c8a9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""South"",
+                    ""type"": ""Button"",
+                    ""id"": ""d60b9a8e-decc-41ef-aa59-9645cb523274"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""a7ba4585-3574-4b4e-b462-719e24e10c35"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3de75fd2-8463-4616-8a5d-462e32c96dda"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0d0c806f-9c73-4bb3-aca9-ecb21b57e2f3"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""ClickAlt"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1821209d-fb67-4018-8036-93860f2f4979"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ClickAlt"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5f8f998f-7284-400c-82e0-b12ff4ee6e63"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""West"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""34d8bfdd-97ec-4c02-8551-4f759cafa5eb"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""West"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""edecd509-99a9-49ba-b8f5-778c1a784b4e"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""East"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7fb6cb6b-35a8-4d30-88a2-d11078df9ed0"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""East"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""121c462e-8c44-408a-9f9d-00ffe46702c8"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""North"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e014726f-eb59-45ef-b99b-0ccdb04ee2f9"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""North"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8986af0d-0a96-45cc-a38e-72ced3533f7b"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""South"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""26fb2f87-eb31-488f-afed-24889f635c1e"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""South"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -853,6 +1041,14 @@ public class @InputActions : IInputActionCollection, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        // QTE
+        m_QTE = asset.FindActionMap("QTE", throwIfNotFound: true);
+        m_QTE_Click = m_QTE.FindAction("Click", throwIfNotFound: true);
+        m_QTE_ClickAlt = m_QTE.FindAction("ClickAlt", throwIfNotFound: true);
+        m_QTE_West = m_QTE.FindAction("West", throwIfNotFound: true);
+        m_QTE_East = m_QTE.FindAction("East", throwIfNotFound: true);
+        m_QTE_North = m_QTE.FindAction("North", throwIfNotFound: true);
+        m_QTE_South = m_QTE.FindAction("South", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1052,6 +1248,79 @@ public class @InputActions : IInputActionCollection, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // QTE
+    private readonly InputActionMap m_QTE;
+    private IQTEActions m_QTEActionsCallbackInterface;
+    private readonly InputAction m_QTE_Click;
+    private readonly InputAction m_QTE_ClickAlt;
+    private readonly InputAction m_QTE_West;
+    private readonly InputAction m_QTE_East;
+    private readonly InputAction m_QTE_North;
+    private readonly InputAction m_QTE_South;
+    public struct QTEActions
+    {
+        private @InputActions m_Wrapper;
+        public QTEActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Click => m_Wrapper.m_QTE_Click;
+        public InputAction @ClickAlt => m_Wrapper.m_QTE_ClickAlt;
+        public InputAction @West => m_Wrapper.m_QTE_West;
+        public InputAction @East => m_Wrapper.m_QTE_East;
+        public InputAction @North => m_Wrapper.m_QTE_North;
+        public InputAction @South => m_Wrapper.m_QTE_South;
+        public InputActionMap Get() { return m_Wrapper.m_QTE; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(QTEActions set) { return set.Get(); }
+        public void SetCallbacks(IQTEActions instance)
+        {
+            if (m_Wrapper.m_QTEActionsCallbackInterface != null)
+            {
+                @Click.started -= m_Wrapper.m_QTEActionsCallbackInterface.OnClick;
+                @Click.performed -= m_Wrapper.m_QTEActionsCallbackInterface.OnClick;
+                @Click.canceled -= m_Wrapper.m_QTEActionsCallbackInterface.OnClick;
+                @ClickAlt.started -= m_Wrapper.m_QTEActionsCallbackInterface.OnClickAlt;
+                @ClickAlt.performed -= m_Wrapper.m_QTEActionsCallbackInterface.OnClickAlt;
+                @ClickAlt.canceled -= m_Wrapper.m_QTEActionsCallbackInterface.OnClickAlt;
+                @West.started -= m_Wrapper.m_QTEActionsCallbackInterface.OnWest;
+                @West.performed -= m_Wrapper.m_QTEActionsCallbackInterface.OnWest;
+                @West.canceled -= m_Wrapper.m_QTEActionsCallbackInterface.OnWest;
+                @East.started -= m_Wrapper.m_QTEActionsCallbackInterface.OnEast;
+                @East.performed -= m_Wrapper.m_QTEActionsCallbackInterface.OnEast;
+                @East.canceled -= m_Wrapper.m_QTEActionsCallbackInterface.OnEast;
+                @North.started -= m_Wrapper.m_QTEActionsCallbackInterface.OnNorth;
+                @North.performed -= m_Wrapper.m_QTEActionsCallbackInterface.OnNorth;
+                @North.canceled -= m_Wrapper.m_QTEActionsCallbackInterface.OnNorth;
+                @South.started -= m_Wrapper.m_QTEActionsCallbackInterface.OnSouth;
+                @South.performed -= m_Wrapper.m_QTEActionsCallbackInterface.OnSouth;
+                @South.canceled -= m_Wrapper.m_QTEActionsCallbackInterface.OnSouth;
+            }
+            m_Wrapper.m_QTEActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Click.started += instance.OnClick;
+                @Click.performed += instance.OnClick;
+                @Click.canceled += instance.OnClick;
+                @ClickAlt.started += instance.OnClickAlt;
+                @ClickAlt.performed += instance.OnClickAlt;
+                @ClickAlt.canceled += instance.OnClickAlt;
+                @West.started += instance.OnWest;
+                @West.performed += instance.OnWest;
+                @West.canceled += instance.OnWest;
+                @East.started += instance.OnEast;
+                @East.performed += instance.OnEast;
+                @East.canceled += instance.OnEast;
+                @North.started += instance.OnNorth;
+                @North.performed += instance.OnNorth;
+                @North.canceled += instance.OnNorth;
+                @South.started += instance.OnSouth;
+                @South.performed += instance.OnSouth;
+                @South.canceled += instance.OnSouth;
+            }
+        }
+    }
+    public QTEActions @QTE => new QTEActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1115,5 +1384,14 @@ public class @InputActions : IInputActionCollection, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+    }
+    public interface IQTEActions
+    {
+        void OnClick(InputAction.CallbackContext context);
+        void OnClickAlt(InputAction.CallbackContext context);
+        void OnWest(InputAction.CallbackContext context);
+        void OnEast(InputAction.CallbackContext context);
+        void OnNorth(InputAction.CallbackContext context);
+        void OnSouth(InputAction.CallbackContext context);
     }
 }
