@@ -2,6 +2,10 @@
 using UnityEngine.UI;
 using Utils;
 
+/// <summary>
+/// Thanks https://www.hallgrimgames.com/blog/2018/11/25/custom-unity-ui-meshes for reference
+/// Also VS 2022 preview does show decompiled code that helped quite a bit
+/// </summary>
 public class UIArcBar : MaskableGraphic {
     [SerializeField]
     Texture m_Texture;
