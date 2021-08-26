@@ -117,7 +117,7 @@ public class UIArcBar : MaskableGraphic {
         adjR.x + adjR.width / 2,
         adjR.y + (adjR.height + rawHeight) / 2 - radius);
 
-    public Vector2 GetWorldSpaceOrigin() {
+    public Vector3 GetWorldSpaceOrigin() {
         Rect adjR = GetPixelAdjustedRect();
         float radius, innerRadiusCoef;
         Vector2 origin;

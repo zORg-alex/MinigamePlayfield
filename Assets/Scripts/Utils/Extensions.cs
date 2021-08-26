@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Utils {
 	public static class Extensions {
@@ -6,5 +7,7 @@ namespace Utils {
 
 		public static Color MultiplyAlpha(this Color col, float multiplier) => new Color(col.r, col.g, col.b, col.a * multiplier);
 		public static Color MultiplyAlpha(this Color col, double multiplier) => new Color(col.r, col.g, col.b, col.a * (float)multiplier);
+
+		public static Vector2 ReadVector2(this InputAction action) => action.ReadValue<Vector2>();
 	}
 }
