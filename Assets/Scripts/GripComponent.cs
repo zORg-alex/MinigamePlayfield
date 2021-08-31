@@ -1,30 +1,43 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using Utils;
 
 [ExecuteInEditMode]
-public class GripComponent : MonoBehaviour
-{
+public class GripComponent : MonoBehaviour {
+	[HideInInspector]
+	public Camera UICamera;
 	private Vector2 oldAnchorMin;
 	private Vector2 oldAnchorMax;
+	[HideInInspector]
 	public List<RectTransform> LeftBuddies = new List<RectTransform>();
+	[HideInInspector]
 	public List<RectTransform> RightBuddies = new List<RectTransform>();
+	[HideInInspector]
 	public List<RectTransform> TopBuddies = new List<RectTransform>();
+	[HideInInspector]
 	public List<RectTransform> BottomBuddies = new List<RectTransform>();
+
 	public enum GripMode { Vertical = 0, Horizontal = 1 }
+	[HideInInspector]
 	public GripMode Mode;
 	private InputActions input;
 	private bool clickedInside;
 	private bool inside;
+	[HideInInspector]
 	public bool Initiated;
 
 	RectTransform rectTransform => (RectTransform)transform;
+
+	public UnityEvent GripClicked = new UnityEvent();
 
 	public void OnEnable() {
 		input = new InputActions();
 		input.UI.Enable();
 		input.UI.Click.performed += Click_performed;
+		var canv = FindObjectOfType<Canvas>();
+		UICamera = canv.worldCamera;
 	}
 
 	public void OnDisable() {
@@ -43,7 +56,7 @@ public class GripComponent : MonoBehaviour
 
 		var mousePos = input.UI.Point.ReadValue<Vector2>();
 		var relPos = mousePos.Divide(new Vector2(Screen.width, Screen.height));
-		if (clickedInside || RectTransformUtility.RectangleContainsScreenPoint(rectTransform, mousePos, Camera.main)) {
+		if (clickedInside || RectTransformUtility.RectangleContainsScreenPoint(rectTransform, mousePos, UICamera)) {
 			if (!inside) {
 				CursorUtils.SetCursor(Mode == GripMode.Horizontal ? CursorUtils.CursorType.ArrowsWE : CursorUtils.CursorType.ArrowsNS);
 				inside = true;
@@ -78,6 +91,7 @@ public class GripComponent : MonoBehaviour
 				rectTransform.anchorMin = new Vector2(rectTransform.anchorMin.x, relPos.y);
 				rectTransform.anchorMax = new Vector2(rectTransform.anchorMax.x, relPos.y);
 			}
+			GripClicked?.Invoke();
 		}
 	}
 

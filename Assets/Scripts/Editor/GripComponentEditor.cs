@@ -18,7 +18,7 @@ public class GripComponentEditor : Editor {
 	}
 
 	public override void OnInspectorGUI() {
-		//base.OnInspectorGUI();
+		base.OnInspectorGUI();
 		var mode = (GripComponent.GripMode)modeProp.enumValueIndex;
 		GUILayout.Label("Current mode: " + mode.ToString());
 
