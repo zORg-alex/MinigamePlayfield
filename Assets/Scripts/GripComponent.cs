@@ -6,6 +6,7 @@ using Utils;
 
 [ExecuteInEditMode]
 public class GripComponent : MonoBehaviour {
+	private Canvas canv;
 	[HideInInspector]
 	public Camera UICamera;
 	private Vector2 oldAnchorMin;
@@ -36,7 +37,7 @@ public class GripComponent : MonoBehaviour {
 		input = new InputActions();
 		input.UI.Enable();
 		input.UI.Click.performed += Click_performed;
-		var canv = FindObjectOfType<Canvas>();
+		canv = GetComponentInParent<Canvas>();
 		UICamera = canv.worldCamera;
 	}
 
@@ -56,7 +57,9 @@ public class GripComponent : MonoBehaviour {
 
 		var mousePos = input.UI.Point.ReadValue<Vector2>();
 		var relPos = mousePos.Divide(new Vector2(Screen.width, Screen.height));
-		if (clickedInside || RectTransformUtility.RectangleContainsScreenPoint(rectTransform, mousePos, UICamera)) {
+		if (clickedInside || (canv.renderMode == RenderMode.ScreenSpaceCamera && RectTransformUtility.RectangleContainsScreenPoint(rectTransform, mousePos, UICamera))
+			|| (canv.renderMode == RenderMode.ScreenSpaceOverlay && RectTransformUtility.RectangleContainsScreenPoint(rectTransform, mousePos))) {
+			
 			if (!inside) {
 				CursorUtils.SetCursor(Mode == GripMode.Horizontal ? CursorUtils.CursorType.ArrowsWE : CursorUtils.CursorType.ArrowsNS);
 				inside = true;

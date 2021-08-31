@@ -25,7 +25,7 @@ public class CameraPerspectiveShifter : MonoBehaviour {
     public void ViewportSizeChanged(GameObject viewport) {
         var rt = viewport.GetComponent<RectTransform>();
         var canv = viewport.GetComponentInParent<Canvas>();
-        var horCenter = (Screen.width / 2 - canv.worldCamera.WorldToScreenPoint(viewport.transform.position).x) / Screen.width * 2;
+        var horCenter = (Screen.width / 2 - RectTransformUtility.WorldToScreenPoint(canv != null && canv.renderMode == RenderMode.ScreenSpaceCamera ? canv.worldCamera : null, viewport.transform.position).x) / Screen.width * 2;
         a02 = horCenter;
         Debug.Log(horCenter);
 	}
