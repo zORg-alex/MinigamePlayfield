@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [ExecuteInEditMode]
-public class ScreeSizChangedEvent : MonoBehaviour
+public class ScreeSizeChangedEvent : MonoBehaviour
 {
 	public delegate void ScreeSizeChangedHandler(Vector2 oldResolution);
 	/// <summary>

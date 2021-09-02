@@ -6,8 +6,10 @@ using System.Collections;
 public class CameraPerspectiveShifter : MonoBehaviour {
     Camera cam;
     public float a02;
+    public GameObject Viewport;
 
-	void OnEnable() {
+    void OnEnable() {
+        ViewportSizeChanged();
         cam = GetComponent<Camera>();
         cam.ResetProjectionMatrix();
         Matrix4x4 p = cam.projectionMatrix;
@@ -22,10 +24,9 @@ public class CameraPerspectiveShifter : MonoBehaviour {
 		cam.projectionMatrix = p;
 	}
 
-    public void ViewportSizeChanged(GameObject viewport) {
-        var rt = viewport.GetComponent<RectTransform>();
-        var canv = viewport.GetComponentInParent<Canvas>();
-        var horCenter = (Screen.width / 2 - RectTransformUtility.WorldToScreenPoint(canv != null && canv.renderMode == RenderMode.ScreenSpaceCamera ? canv.worldCamera : null, viewport.transform.position).x) / Screen.width * 2;
+    public void ViewportSizeChanged() {
+        var canv = Viewport.GetComponentInParent<Canvas>();
+        var horCenter = (Screen.width / 2 - RectTransformUtility.WorldToScreenPoint(canv != null && canv.renderMode == RenderMode.ScreenSpaceCamera ? canv.worldCamera : null, Viewport.transform.position).x) / Screen.width * 2;
         a02 = horCenter;
         Debug.Log(horCenter);
 	}
