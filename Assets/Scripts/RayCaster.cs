@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using Utils;
 
@@ -26,13 +27,24 @@ public class RayCaster : Designs.Singleton<RayCaster> {
 	private void OnEnable() {
 		input = new InputActions();
 		input.UI.Enable();
+		input.UI.Click.performed += OnClick; 
 	}
+
+	public UnityEvent OnUIClick = new UnityEvent(); 
+	public UnityEvent OnSIClick = new UnityEvent();
+
+
+	private void OnClick(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+		if (input.UI.Click.ReadValue<float>() == 1 && RayCastAll()) {
+			if (MouseOverUI) OnUIClick.Invoke();
+			else if (MouseOverSI) OnSIClick.Invoke();
+		}
+	}
+
+
 	public bool MouseOverUI;
 	public bool MouseOverSI;
 	public List<RectTransform> rectTransforms;
 	public List<SceneInteractable> SceneInteractables;
 
-	private void Update() {
-		RayCastAll();
-	}
 }
