@@ -271,7 +271,7 @@
                     "id": "a8b11e6e-5570-41fe-89d0-89f5ea7c22b6",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=1)"
                 },
                 {
                     "name": "Cancel",
@@ -279,7 +279,7 @@
                     "id": "202a159d-af5d-4c6c-920f-30903d8db1cb",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=1)"
                 },
                 {
                     "name": "Point",
@@ -295,7 +295,7 @@
                     "id": "fd5c39b1-1bd1-4a3d-a08d-32c50a36140e",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=1)"
                 },
                 {
                     "name": "ScrollWheel",
@@ -311,7 +311,7 @@
                     "id": "35061765-27e4-469e-89dd-8c2e1e6c997c",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=1)"
                 },
                 {
                     "name": "RightClick",
@@ -319,7 +319,7 @@
                     "id": "8037c3af-0cc7-48fe-a56c-438f244ef202",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=1)"
                 },
                 {
                     "name": "TrackedDevicePosition",
@@ -769,7 +769,7 @@
                     "id": "30a7dfbf-7784-4db2-9caa-26ba9f5deb05",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=1)"
                 },
                 {
                     "name": "ClickAlt",
@@ -777,7 +777,7 @@
                     "id": "0b033b42-0420-4317-a76e-87b9d30111d3",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=1)"
                 },
                 {
                     "name": "West",
@@ -785,7 +785,7 @@
                     "id": "929e8faa-4cc7-42af-8065-f5b0507a136c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=1)"
                 },
                 {
                     "name": "East",
@@ -793,7 +793,7 @@
                     "id": "4152b09b-8844-4249-ba45-1e9ff82864ab",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=1)"
                 },
                 {
                     "name": "North",
@@ -801,7 +801,7 @@
                     "id": "d37df7ff-44d6-4e90-9117-ff356761c8a9",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=1)"
                 },
                 {
                     "name": "South",
@@ -809,7 +809,7 @@
                     "id": "d60b9a8e-decc-41ef-aa59-9645cb523274",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=1)"
                 }
             ],
             "bindings": [

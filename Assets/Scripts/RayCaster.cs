@@ -18,33 +18,35 @@ public class RayCaster : Designs.Singleton<RayCaster> {
 		rectTransforms = rRTs.ToList();
 		MouseOverUI = rRTs.Count() > 0 && !rRTs.Where(go=>go.GetComponent<UIIgnore>() != null).Any();
 
-		var rSIs = results.Select(r => r.gameObject.GetComponent<SceneInteractable>()).Where(r => r != null);
-		SceneInteractables = rSIs.ToList();
-		MouseOverSI = !MouseOverUI && rSIs.Count() > 0;
+		var hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(input.UI.Point.ReadVector2()));
+		if (hits.Count() > 0) {
+			SceneTransforms = hits.Select(h=>h.transform).ToList();
+			MouseOverSceneTransform = !MouseOverUI;
+		} else
+			MouseOverSceneTransform = false;
 
 		return results.Count > 0;
 	}
 	private void OnEnable() {
 		input = new InputActions();
 		input.UI.Enable();
-		input.UI.Click.performed += OnClick; 
+		input.UI.Click.started += OnClick; 
 	}
 
 	public UnityEvent OnUIClick = new UnityEvent(); 
-	public UnityEvent OnSIClick = new UnityEvent();
-
+	public UnityEvent OnSTClick = new UnityEvent();
 
 	private void OnClick(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
-		if (input.UI.Click.ReadValue<float>() == 1 && RayCastAll()) {
+		if (RayCastAll()) {
 			if (MouseOverUI) OnUIClick.Invoke();
-			else if (MouseOverSI) OnSIClick.Invoke();
+			else if (MouseOverSceneTransform) OnSTClick.Invoke();
 		}
 	}
 
 
 	public bool MouseOverUI;
-	public bool MouseOverSI;
+	public bool MouseOverSceneTransform;
 	public List<RectTransform> rectTransforms;
-	public List<SceneInteractable> SceneInteractables;
+	public List<Transform> SceneTransforms;
 
 }
