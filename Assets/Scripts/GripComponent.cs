@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -36,18 +37,24 @@ public class GripComponent : MonoBehaviour {
 	public void OnEnable() {
 		input = new InputActions();
 		input.UI.Enable();
-		input.UI.Click.performed += Click_performed;
+		input.UI.Click.started += Clicked;
+		input.UI.Click.performed += Released;
 		canv = GetComponentInParent<Canvas>();
 		UICamera = canv.worldCamera;
 	}
 
 	public void OnDisable() {
-		input.UI.Click.performed -= Click_performed;
+		input.UI.Click.started -= Clicked;
+		input.UI.Click.performed -= Released;
 	}
 
-	private void Click_performed(InputAction.CallbackContext ctx) {
-		clickedInside = inside && ctx.ReadValue<float>() > .5f;
+	private void Clicked(InputAction.CallbackContext ctx) {
+		clickedInside = inside;
 	}
+	private void Released(InputAction.CallbackContext obj) {
+		clickedInside = false;
+	}
+
 
 	private void Update() {
 		if (rectTransform.anchorMin != oldAnchorMin || rectTransform.anchorMax != oldAnchorMax) {
