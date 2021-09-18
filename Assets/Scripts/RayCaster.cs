@@ -16,7 +16,7 @@ public class RayCaster : Designs.Singleton<RayCaster> {
 
 		var rRTs = results.Select(r => r.gameObject.GetComponent<RectTransform>()).Where(r=>r != null);
 		rectTransforms = rRTs.ToList();
-		MouseOverUI = rRTs.Count() > 0 && !rRTs.All(go => go.GetComponent<UIIgnore>() != null);
+		MouseOverUI = rRTs.Any() && !rRTs.All(go => go.GetComponent<UIIgnore>() != null);
 
 		var hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(input.UI.Point.ReadVector2()));
 		if (hits.Count() > 0) {

@@ -64,7 +64,7 @@ public class GripComponent : MonoBehaviour {
 
 		var mousePos = input.UI.Point.ReadValue<Vector2>();
 		var relPos = mousePos.Divide(new Vector2(Screen.width, Screen.height));
-		if (clickedInside || RectTransformUtility.RectangleContainsScreenPoint(rectTransform, mousePos, canv.renderMode == RenderMode.ScreenSpaceCamera ? UICamera : null)) {
+		if (clickedInside || RectTransformUtility.RectangleContainsScreenPoint(rectTransform, mousePos, UICamera )) {
 			
 			if (!inside) {
 				CursorUtils.SetCursor(Mode == GripMode.Horizontal ? CursorUtils.CursorType.ArrowsWE : CursorUtils.CursorType.ArrowsNS);
