@@ -1,0 +1,492 @@
+fileFormatVersion: 2
+guid: 4df7d19f699ff4249885812ff9e589ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1600628184255442377
+    second: FlamesAnim_0
+  - first:
+      213: 8160769629217220471
+    second: FlamesAnim_1
+  - first:
+      213: 5419035490637807952
+    second: FlamesAnim_2
+  - first:
+      213: 6985322032060013853
+    second: FlamesAnim_3
+  - first:
+      213: -6880275277618192498
+    second: FlamesAnim_4
+  - first:
+      213: -2592714084933385832
+    second: FlamesAnim_5
+  - first:
+      213: -3423098691377784675
+    second: FlamesAnim_6
+  - first:
+      213: 7969873930942639949
+    second: FlamesAnim_7
+  - first:
+      213: -5986272264071248454
+    second: FlamesAnim_8
+  - first:
+      213: 686468361118485195
+    second: FlamesAnim_9
+  - first:
+      213: 1558341147671959567
+    second: FlamesAnim_10
+  - first:
+      213: -1418700960212360931
+    second: FlamesAnim_11
+  - first:
+      213: -5969212600333143583
+    second: FlamesAnim_12
+  - first:
+      213: -6262434504385307997
+    second: FlamesAnim_13
+  - first:
+      213: -7561738266559383694
+    second: FlamesAnim_14
+  - first:
+      213: -2731001867727451665
+    second: FlamesAnim_15
+  - first:
+      213: -1233825362245609852
+    second: FlamesAnim_16
+  - first:
+      213: -2870816565041681115
+    second: FlamesAnim_17
+  - first:
+      213: -7384075344034947789
+    second: FlamesAnim_18
+  - first:
+      213: -5917712628005723044
+    second: FlamesAnim_19
+  - first:
+      213: -6926162209513538245
+    second: FlamesAnim_20
+  - first:
+      213: -5589287818285279563
+    second: FlamesAnim_21
+  - first:
+      213: -437586163199081524
+    second: FlamesAnim_22
+  - first:
+      213: 2440160332952515302
+    second: FlamesAnim_23
+  - first:
+      213: -1707265354440204266
+    second: FlamesAnim_24
+  - first:
+      213: -9124908330419606862
+    second: FlamesAnim_25
+  - first:
+      213: 7489987597755090438
+    second: FlamesAnim_26
+  - first:
+      213: 7909993716530276924
+    second: FlamesAnim_27
+  - first:
+      213: -6461042079054896380
+    second: FlamesAnim_28
+  - first:
+      213: -2522144316470047132
+    second: FlamesAnim_29
+  - first:
+      213: 6411393579746909829
+    second: FlamesAnim_30
+  - first:
+      213: 3968118519261465772
+    second: FlamesAnim_31
+  - first:
+      213: -7703646111818480667
+    second: FlamesAnim_32
+  - first:
+      213: 4559023717656683703
+    second: FlamesAnim_33
+  - first:
+      213: -3336254060820673478
+    second: FlamesAnim_34
+  - first:
+      213: -2634048150668411333
+    second: FlamesAnim_35
+  - first:
+      213: -6820978518338470029
+    second: FlamesAnim_36
+  - first:
+      213: 8648574557884864696
+    second: FlamesAnim_37
+  - first:
+      213: 200148440651872390
+    second: FlamesAnim_38
+  - first:
+      213: -8210326282899971642
+    second: FlamesAnim_39
+  - first:
+      213: -5206065960873607355
+    second: FlamesAnim_40
+  - first:
+      213: -770366431779788492
+    second: FlamesAnim_41
+  - first:
+      213: 532863861701863317
+    second: FlamesAnim_42
+  - first:
+      213: -5468689443357394010
+    second: FlamesAnim_43
+  - first:
+      213: 4250513212092715493
+    second: FlamesAnim_44
+  - first:
+      213: -7749359906224155639
+    second: FlamesAnim_45
+  - first:
+      213: -8903468502827715420
+    second: FlamesAnim_46
+  - first:
+      213: 5731704015452442564
+    second: FlamesAnim_47
+  - first:
+      213: -8287813034103595394
+    second: FlamesAnim_48
+  - first:
+      213: -8646538769578647320
+    second: FlamesAnim_49
+  - first:
+      213: 7160174867973078062
+    second: FlamesAnim_50
+  - first:
+      213: -7069070892949935515
+    second: FlamesAnim_51
+  - first:
+      213: 7133474693843367892
+    second: FlamesAnim_52
+  - first:
+      213: -2760244572811321481
+    second: FlamesAnim_53
+  - first:
+      213: 5795147672547474566
+    second: FlamesAnim_54
+  - first:
+      213: -1616376952766292461
+    second: FlamesAnim_55
+  - first:
+      213: 5566499666154456295
+    second: FlamesAnim_56
+  - first:
+      213: 1898844688619428026
+    second: FlamesAnim_57
+  - first:
+      213: 4528605571750564007
+    second: FlamesAnim_58
+  - first:
+      213: -4024623515271074263
+    second: FlamesAnim_59
+  - first:
+      213: 6812388375255469930
+    second: FlamesAnim_60
+  - first:
+      213: 2303491363517225703
+    second: FlamesAnim_61
+  - first:
+      213: 2408527297159837853
+    second: FlamesAnim_62
+  - first:
+      213: -4567094116151785366
+    second: FlamesAnim_63
+  - first:
+      213: 7285020988599517238
+    second: FlamesAnim_64
+  - first:
+      213: -615581488790638949
+    second: FlamesAnim_65
+  - first:
+      213: 5450880980462289780
+    second: FlamesAnim_66
+  - first:
+      213: -715701088621476278
+    second: FlamesAnim_67
+  - first:
+      213: -7752386991349821572
+    second: FlamesAnim_68
+  - first:
+      213: -6600144046258182219
+    second: FlamesAnim_69
+  - first:
+      213: -264167514068496637
+    second: FlamesAnim_70
+  - first:
+      213: 7141611589541543986
+    second: FlamesAnim_71
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FlamesAnim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 1024
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd26046ad2963610800000000000000
+      internalID: 1600628184255442377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamesAnim_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 1024
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777e94b7db0e04170800000000000000
+      internalID: 8160769629217220471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamesAnim_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 1024
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05183b44118443b40800000000000000
+      internalID: 5419035490637807952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamesAnim_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 1024
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d95aad069d0f060800000000000000
+      internalID: 6985322032060013853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamesAnim_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 1024
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f5aa8961a5480a0800000000000000
+      internalID: -6880275277618192498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamesAnim_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 1024
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891c46bc644d40cd0800000000000000
+      internalID: -2592714084933385832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamesAnim_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 1024
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98925560e5be70d0800000000000000
+      internalID: -3423098691377784675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlamesAnim_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f6b7e2d1eaa9e60800000000000000
+      internalID: 7969873930942639949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
