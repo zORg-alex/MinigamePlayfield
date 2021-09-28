@@ -22,10 +22,11 @@ public class RayCaster : Designs.Singleton<RayCaster> {
 		if (hits.Count() > 0) {
 			SceneTransforms = hits.Select(h=>h.transform).ToList();
 			MouseOverSceneTransform = !MouseOverUI;
+
 		} else
 			MouseOverSceneTransform = false;
 
-		return results.Count > 0;
+		return MouseOverUI || MouseOverSceneTransform;
 	}
 	private void OnEnable() {
 		input = new InputActions();
