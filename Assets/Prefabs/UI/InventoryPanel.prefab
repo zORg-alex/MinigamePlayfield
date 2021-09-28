@@ -231,7 +231,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3701875880785655473}
   m_HandleRect: {fileID: 3701875880785655474}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -365,9 +365,7 @@ GameObject:
   - component: {fileID: 3701875882559819841}
   - component: {fileID: 3701875882559819855}
   - component: {fileID: 3701875882559819854}
-  - component: {fileID: 7854502076224483155}
-  - component: {fileID: 1555073128845154323}
-  - component: {fileID: 1847207610833379815}
+  - component: {fileID: 6065103292695035970}
   m_Layer: 5
   m_Name: InventoryPanel
   m_TagString: Untagged
@@ -477,26 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
---- !u!95 &7854502076224483155
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3701875882559819843}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1555073128845154323
+--- !u!114 &6065103292695035970
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -505,111 +484,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3701875882559819843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 422de6a7f89131d44bcb7ad4052996ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 87bc661b9996ff64e869f207d8b41870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectionName: MyCollection
-  restrictByWeight: 0
-  restrictMaxWeight: 100
-  _useReferences: 0
-  canContainCurrencies: 1
-  canDropFromCollection: 0
-  canUseItemsFromReference: 0
-  canUseFromCollection: 0
-  canDragInCollection: 1
-  canPutItemsInCollection: 1
-  canStackItemsInCollection: 1
-  canUnstackItemsInCollection: 1
-  manuallyDefineCollection: 0
-  container: {fileID: 3701875881854730502}
-  itemButtonPrefab: {fileID: 5806654449357415823, guid: 703b38b0a0c622c4ca638cc2956de97c, type: 3}
-  filters:
-    filters:
-    - restrictionType: 1
-      filterType: 0
-      categoryValue: {fileID: 11400000, guid: 5701ae926c85ae34d93f635ab466b5e3, type: 2}
-      statDefinitionValue: {fileID: 0}
-      rarityValue: {fileID: 0}
-      stringValue: 
-      boolValue: 0
-      floatValue: 0
-    - restrictionType: 1
-      filterType: 0
-      categoryValue: {fileID: 11400000, guid: c35bc5a69a0be11409459881bb05a8bd, type: 2}
-      statDefinitionValue: {fileID: 0}
-      rarityValue: {fileID: 0}
-      stringValue: 
-      boolValue: 0
-      floatValue: 0
-    matchType: 1
-  ignoreItemLayoutSizes: 1
-  sortButton: {fileID: 0}
-  scrollRect: {fileID: 3701875882559819855}
-  isSharedCollection: 0
-  _collectionPriority: 0
-  _initialCollectionSize: 20
-  useItemMoveToBank: 1
-  useItemSell: 1
-  swapItemAudioClip:
-    audioClip: {fileID: 0}
-    volume: 1
-    pitch: 1
-    loop: 0
-  currencyChangeAudioClip:
-    audioClip: {fileID: 0}
-    volume: 1
-    pitch: 1
-    loop: 0
-  sortAudioClip:
-    audioClip: {fileID: 0}
-    volume: 1
-    pitch: 1
-    loop: 0
-  onAddItemAudioClip:
-    audioClip: {fileID: 0}
-    volume: 1
-    pitch: 1
-    loop: 0
---- !u!114 &1847207610833379815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3701875882559819843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6f3b4326c78e364b854e4db36c8d252, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windowName: Inventory
-  hideOnStart: 0
-  resetPositionOnStart: 0
-  blockUIInput: 0
-  blockPlayerInput: 0
-  _showAnimation:
-    motion: {fileID: 0}
-    speed: 1
-    crossFade: 0
-    crossFadeSpeed: 0.3
-  _hideAnimation:
-    motion: {fileID: 0}
-    speed: 1
-    crossFade: 0
-    crossFadeSpeed: 0.3
-  showAudioClip:
-    audioClip: {fileID: 0}
-    volume: 1
-    pitch: 1
-    loop: 0
-  hideAudioClip:
-    audioClip: {fileID: 0}
-    volume: 1
-    pitch: 1
-    loop: 0
-  onShowActions:
-    m_PersistentCalls:
-      m_Calls: []
-  onHideActions:
-    m_PersistentCalls:
-      m_Calls: []

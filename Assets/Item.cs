@@ -6,9 +6,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //Item props: level, name, temperature...
+[ExecuteInEditMode, SelectionBase]
 public class Item : MonoBehaviour {
     [ShowInInspector]
     internal ItemObject ItemObject { get => _itemObject; set { _itemObject = value; SetTexture(); } }
+    [HideInInspector,SerializeField]
     ItemObject _itemObject;
 	private SpriteRenderer sr;
     private int DrawOrder;

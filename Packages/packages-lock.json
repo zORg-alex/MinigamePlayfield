@@ -221,7 +221,7 @@
       }
     },
     "com.unity.vfx-toolbox": {
-      "version": "file:C:/Users/zorg-/Desktop/VFXToolbox-2.0.0-preview",
+      "version": "file:C:/Downloads/VFXToolbox-2.0.0-preview",
       "depth": 0,
       "source": "local",
       "dependencies": {}
