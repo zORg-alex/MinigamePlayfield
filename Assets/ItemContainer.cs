@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 //Item number, add, remove, animation 
 public class ItemContainer : MonoBehaviour {
@@ -11,6 +12,8 @@ public class ItemContainer : MonoBehaviour {
 	[SerializeField]
 	int count;
 	public int Count => count;
+
+	public Image ItemIcon;
 
 	public void Push(Item item) {
 		if (count == 0) {

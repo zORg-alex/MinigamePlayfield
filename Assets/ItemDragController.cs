@@ -50,6 +50,7 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 	}
 	//TODO take and drag (coroutings) item, 
 	IEnumerator Drag(Item item) {
+
 		var rb = item.GetComponent<Rigidbody>();
 		rb.isKinematic = true;
 		rb.angularVelocity = Vector3.zero;

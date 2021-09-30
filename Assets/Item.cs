@@ -17,7 +17,8 @@ public class Item : MonoBehaviour {
 
 	private void OnEnable() {
         sr = GetComponentInChildren<SpriteRenderer>();
-        DrawOrder = sr.material.renderQueue;
+        if (sr != null) 
+            DrawOrder = sr.sharedMaterial.renderQueue;
 	}
 
 	[Button]
@@ -26,9 +27,9 @@ public class Item : MonoBehaviour {
     }
 
     public void DrawOverUI() {
-        sr.material.renderQueue++;
+        sr.sharedMaterial.renderQueue++;
     }
     public void NormalDrawOrder() {
-        sr.material.renderQueue = DrawOrder;
+        sr.sharedMaterial.renderQueue = DrawOrder;
 	}
 }
