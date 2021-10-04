@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 //Item number, add, remove, animation 
 public class ItemContainer : MonoBehaviour {
@@ -14,6 +14,7 @@ public class ItemContainer : MonoBehaviour {
 	public int Count => count;
 
 	public Image ItemIcon;
+	public Text counter;
 
 	public void Push(Item item) {
 		if (count == 0) {
@@ -25,24 +26,29 @@ public class ItemContainer : MonoBehaviour {
 			SetIconTexture();
 		} else {
 			Destroy(item.gameObject);
+
 		}
 		count++;
+		counter.text = count.ToString();
 	}
 
 	public Item Pop() {
 		count--;
+		counter.text = count.ToString();
 		Item newItem;
 		if (count == 0) {
 			newItem = item;
+			item.transform.parent = null;
+			item.gameObject.SetActive(true);
 			Destroy(gameObject);//Or move to Update, if it's not working
 		} else {
 			newItem = Instantiate(item);
 			newItem.gameObject.SetActive(true);
 		}
-		return new Item();
+		return newItem;
 	}
 	private void SetIconTexture() {
-
+		ItemIcon.sprite = item.ItemObject.sprite;
 	}
 
 }

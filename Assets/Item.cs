@@ -22,7 +22,7 @@ public class Item : MonoBehaviour {
 	}
 
 	[Button]
-    private void SetTexture() {
+    public void SetTexture() {
         sr.sprite = ItemObject.sprite;
     }
 

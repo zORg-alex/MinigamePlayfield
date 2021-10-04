@@ -48,9 +48,11 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 			return;
 		}
 	}
+
+	public GameObject test;
 	//TODO take and drag (coroutings) item, 
 	IEnumerator Drag(Item item) {
-
+		test = item.gameObject;
 		var rb = item.GetComponent<Rigidbody>();
 		rb.isKinematic = true;
 		rb.angularVelocity = Vector3.zero;
@@ -58,7 +60,8 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 		item.DrawOverUI();
 
 		do {
-			item.transform.position = PositionFromCameraspace(Camera.main, input.UI.Point.ReadVector2(), WorldDropDistanceFromCamera);
+			if (item != null)
+				item.transform.position = PositionFromCameraspace(Camera.main, input.UI.Point.ReadVector2(), WorldDropDistanceFromCamera);
 
 			yield return null;
 		} while (isDragging);
