@@ -38,7 +38,7 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 		} 
 	}
 	public void OnItemClick() {
-		var item = RayCaster.Instance.SceneTransforms
+		var item = RayCaster.Instance.SceneTransforms?
 			.FirstOrDefault(i=>i.GetComponent<Item>())
 			.GetComponent<Item>();
 		if (item != null) {
