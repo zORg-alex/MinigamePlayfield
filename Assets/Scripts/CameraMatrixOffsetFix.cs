@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,11 +18,7 @@ public class CameraMatrixOffsetFix : MonoBehaviour
 		FitCamera();
 	}
 
-	// Update is called once per frame
-	void Update() {
-		FitCamera();
-	}
-
+	[Button]
 	public void FitCamera() {
 		var camFoV = canvas.worldCamera.fieldOfView;
 		var vertSize = Mathf.Tan((camFoV / 2).Deg2Rad()) * 2 * Distance;

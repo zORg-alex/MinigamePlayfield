@@ -39,7 +39,7 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 	}
 	public void OnItemClick() {
 		var item = RayCaster.Instance.SceneTransforms
-			.FirstOrDefault(i=>i.GetComponent<Item>())
+			.FirstOrDefault(i=>i.GetComponent<Item>())?
 			.GetComponent<Item>();
 		if (item != null) {
 			isDragging = true;
@@ -49,10 +49,8 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 		}
 	}
 
-	public GameObject test;
-	//TODO take and drag (coroutings) item, 
+
 	IEnumerator Drag(Item item) {
-		test = item.gameObject;
 		var rb = item.GetComponent<Rigidbody>();
 		rb.isKinematic = true;
 		rb.angularVelocity = Vector3.zero;
