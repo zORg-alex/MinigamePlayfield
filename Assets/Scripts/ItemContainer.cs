@@ -43,6 +43,7 @@ public class ItemContainer : MonoBehaviour {
 			Destroy(gameObject);//Or move to Update, if it's not working
 		} else {
 			newItem = Instantiate(item);
+			newItem.transform.localScale = Vector3.one;
 			newItem.gameObject.SetActive(true);
 		}
 		return newItem;
