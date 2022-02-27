@@ -6,6 +6,7 @@ using UnityEngine;
 public class ViewportPositionProvider : MonoBehaviour
 {
 	private Canvas canvas;
+	public RectTransform root;
 
 	public Vector3 positionInPixels { get; private set; }
 
@@ -13,10 +14,12 @@ public class ViewportPositionProvider : MonoBehaviour
 	public float verticalRelative => positionInPixels.y / canvas.pixelRect.height * 2;
 	private void OnEnable() {
 		canvas = FindObjectOfType<Canvas>();
+		if (!root && canvas)
+			root = canvas.GetComponent<RectTransform>();
 	}
 	// Update is called once per frame
 	void Update()
     {
-		positionInPixels = -RectTransformUtility.CalculateRelativeRectTransformBounds(transform, canvas.transform).center;
+		positionInPixels = root.InverseTransformPoint(transform.position);
     }
 }
