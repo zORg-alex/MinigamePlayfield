@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 3093040461564976476}
   - component: {fileID: 7287850395433412552}
   - component: {fileID: 5025295388086880090}
-  - component: {fileID: 4573985639711418290}
+  - component: {fileID: 4103636359145289392}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -185,7 +185,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 0}
+    m_NormalColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -204,8 +204,8 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 4573985639711418290}
-  image: {fileID: 0}
+  m_TargetGraphic: {fileID: 4103636359145289392}
+  image: {fileID: 6527858546236059703}
   changeFilling: 0.01
 --- !u!222 &5025295388086880090
 CanvasRenderer:
@@ -215,7 +215,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5471439642409809217}
   m_CullTransparentMesh: 1
---- !u!114 &4573985639711418290
+--- !u!114 &4103636359145289392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,14 +228,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -2413806693520163455, guid: 971016ed36d768e4caae1f98d6add349, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

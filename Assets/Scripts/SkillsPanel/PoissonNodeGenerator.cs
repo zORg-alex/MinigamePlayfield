@@ -50,11 +50,12 @@ public class PoissonNodeGenerator : SerializedMonoBehaviour, INodeProvider {
 
 		}
 
-		WeightedNodeList = points.Select(v => (point: new Vector3(v.x - panelSize.x / 2, 0, v.y - panelSize.y / 2), weight: rand.Range(0f, 1f))).ToList();
+		WeightedNodeList = points.Select(v => (point: new Vector3(v.x /*- panelSize.x / 2*/, 0, v.y /*- panelSize.y / 2*/), weight: rand.Range(0f, 1f))).ToList();
 	}
 
 	static bool IsValid(Vector2 candidate, Vector2 RegionSize, float cellSize, float radius, List<Vector2> points, int[,] grid) {
-		if (candidate.x >= 0 && candidate.x < RegionSize.x && candidate.y >= 0 && candidate.y < RegionSize.y) {
+		var offset = 70;
+		if (candidate.x >= 0 + offset && candidate.x < RegionSize.x - offset && candidate.y >= 0 + offset && candidate.y < RegionSize.y - offset) {
 			int cellX = (int)(candidate.x / cellSize);
 			int cellY = (int)(candidate.y / cellSize);
 			int searchStartX = Mathf.Max(0, cellX - 2);

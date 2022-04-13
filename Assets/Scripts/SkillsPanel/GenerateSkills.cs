@@ -32,15 +32,17 @@ public class GenerateSkills : MonoBehaviour
 		Utility.Utils.DestroyGameObjects(children);
 
 		var rand = new System.Random();
-		var nodes = nodeProvider.GetNodeList(rand, 70, rectTransform.rect.size);
+		var nodes = nodeProvider.GetNodeList(rand, 250, rectTransform.rect.size);
 		var linkedNodes = nodeLinker.GetLinkedNodes(nodes, rand, out var links, 10f);
 
 		foreach (var node in linkedNodes) {
 			var skill = Instantiate(CellPrefab);
-			skill.transform.parent = transform;
+			skill.SetParent(transform);
+			skill.anchoredPosition3D = Vector3.zero;
 			skill.localScale = Vector3.one;
-			skill.offsetMin = new Vector3(node.Point.x, node.Point.z);
+			skill.anchoredPosition = new Vector3(node.Point.x, node.Point.z);
 			skill.sizeDelta = CellPrefab.sizeDelta;
+			
 		}
 
 	}
