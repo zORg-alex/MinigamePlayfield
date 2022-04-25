@@ -8,7 +8,8 @@ using Utility;
 [ExecuteAlways, RequireComponent(typeof(RectTransform))]
 public class GenerateSkills : MonoBehaviour
 {
-	public RectTransform CellPrefab;
+	public SkillCell CellPrefab;
+	public SkillLink skillLinkPrefab;
 	private RectTransform rectTransform;
 	private INodeProvider nodeProvider;
 	private INodeLinker nodeLinker;
@@ -34,16 +35,24 @@ public class GenerateSkills : MonoBehaviour
 		var rand = new System.Random();
 		var nodes = nodeProvider.GetNodeList(rand, 250, rectTransform.rect.size);
 		var linkedNodes = nodeLinker.GetLinkedNodes(nodes, rand, out var links, 10f);
-
+		//List<LinkedPoint> linkedSkills = 
+		var sizeDelta = CellPrefab.GetComponent<RectTransform>().sizeDelta;
 		foreach (var node in linkedNodes) {
 			var skill = Instantiate(CellPrefab);
-			skill.SetParent(transform);
-			skill.anchoredPosition3D = Vector3.zero;
-			skill.localScale = Vector3.one;
-			skill.anchoredPosition = new Vector3(node.Point.x, node.Point.z);
-			skill.sizeDelta = CellPrefab.sizeDelta;
+			var skillTransform = skill.GetComponent<RectTransform>();
+			skillTransform.SetParent(transform);
+			skillTransform.anchoredPosition3D = Vector3.zero;
+			skillTransform.localScale = Vector3.one;
+			skillTransform.anchoredPosition = new Vector3(node.Point.x, node.Point.z);
+			skillTransform.sizeDelta = sizeDelta;
 			
 		}
+
+        foreach (var link in links)
+        {
+			var line = Instantiate(skillLinkPrefab);
+			line.Initialize(link[0], link[1]);
+        }
 
 	}
 

@@ -13,7 +13,7 @@ public class PoissonNodeGenerator : SerializedMonoBehaviour, INodeProvider {
 
 	[Button]
 	public void Generate() => GeneratePoints(null, Radius, Size);
-	public void GeneratePoints(System.Random rand = null, float radius = 5f, Vector2 panelSize = default, int numSamplesBeforeRejection = 30) {
+	public void GeneratePoints(System.Random rand = null, float radius = 5f, Vector2 panelSize = default, int numSamplesBeforeRejection = 100) {
 		if (panelSize == default) panelSize = Vector2.one * 300;
 		if (rand == null) rand = new System.Random();
 

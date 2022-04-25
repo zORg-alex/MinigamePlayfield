@@ -9,53 +9,58 @@ using UnityEngine.UIElements;
 
 public class CustomButton : Selectable {
 	public UnityEngine.UI.Image image;
-	[Range(0f,1f)] public float changeFilling = 0.01f;
-	//public CoroutingsAndProps coroutineScript;
+	public float fillingSpeed = 1f;
+    private IEnumerator imageFillingUpCoroutine;
+    private IEnumerator imageFillingDownCoroutine;
+	public UnityEvent onFilled = new UnityEvent();
+    //public CoroutingsAndProps coroutineScript;
 
 
-	public override void OnPointerEnter(PointerEventData eventData) {
+    public override void OnPointerEnter(PointerEventData eventData) {
 		base.OnPointerEnter(eventData);
-		Debug.Log("OnPointerEnter");
 	}
 
 	public override void OnPointerExit(PointerEventData eventData) {
 		base.OnPointerExit(eventData);
-		if (image.fillAmount != 1) {
-			StopCoroutine("ImageFillingUp");
-			StartCoroutine("ImageFillingDown", image);
+		if (image.fillAmount != 1 && image.IsActive()) {
+			StopCoroutine(imageFillingUpCoroutine);
+			imageFillingDownCoroutine = ImageFillingDown(image);
+			StartCoroutine(imageFillingDownCoroutine);
 		}
-		Debug.Log("OnPointerExit");
 	}
 
 	public override void OnPointerDown(PointerEventData eventData) {
 		base.OnPointerDown(eventData);
-		StartCoroutine("ImageFillingUp", image);
-
-		Debug.Log("OnPointerDown");
+		if (image.IsActive())
+        {
+			imageFillingUpCoroutine = ImageFillingUp(image);
+			StartCoroutine(imageFillingUpCoroutine);
+		}
 	}
 
 	public override void OnPointerUp(PointerEventData eventData) {
 		base.OnPointerUp(eventData);
 		if (image.fillAmount != 1) {
-			StopCoroutine("ImageFillingUp");
-			StartCoroutine("ImageFillingDown", image);
+			StopCoroutine(imageFillingUpCoroutine);
+			imageFillingDownCoroutine = ImageFillingDown(image);
+			StartCoroutine(imageFillingDownCoroutine);
 		}
-		Debug.Log("OnPointerUp");
 	}
 
 	IEnumerator ImageFillingUp(UnityEngine.UI.Image imageFill) {
 		while (imageFill.fillAmount < 1f) {
-			imageFill.fillAmount += changeFilling;
-			Debug.Log("Filling UP");
+			imageFill.fillAmount += fillingSpeed * Time.deltaTime;
 			yield return null;
 		}
+		imageFillingUpCoroutine = null;
+		onFilled.Invoke();
 	}
 
 	IEnumerator ImageFillingDown(UnityEngine.UI.Image imageFill) {
 		while (imageFill.fillAmount > 0f) {
-			imageFill.fillAmount -= changeFilling;
-			Debug.Log("Filling DOWN");
+			imageFill.fillAmount -= fillingSpeed * Time.deltaTime;
 			yield return null;
 		}
+		imageFillingDownCoroutine = null;
 	}
 }
