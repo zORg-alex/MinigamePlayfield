@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3596616735041413757}
   - component: {fileID: 549248609917104904}
-  - component: {fileID: 2564580554507611112}
+  - component: {fileID: 8762284659436704114}
   m_Layer: 5
   m_Name: SkillLine
   m_TagString: Untagged
@@ -58,7 +58,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 7f5f8c41267ec1d40bcfecb2455c8176, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -137,7 +137,7 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!114 &2564580554507611112
+--- !u!114 &8762284659436704114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,10 +146,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 62012430857603794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e03811a7e12cd49a65a9303eb9a48e, type: 3}
+  m_Script: {fileID: 11500000, guid: a6ea1a3959467314e866168783be4399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {fileID: 0}
-  destination: {fileID: 0}
+  origin: {x: 0, y: 0, z: 0}
+  destination: {x: 0, y: 0, z: 0}
   lineDrawSpeed: 6
-  lineWidth: 0.45

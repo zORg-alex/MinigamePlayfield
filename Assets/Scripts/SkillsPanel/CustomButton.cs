@@ -23,7 +23,8 @@ public class CustomButton : Selectable {
 	public override void OnPointerExit(PointerEventData eventData) {
 		base.OnPointerExit(eventData);
 		if (image.fillAmount != 1 && image.IsActive()) {
-			StopCoroutine(imageFillingUpCoroutine);
+			if (imageFillingUpCoroutine != null)
+				StopCoroutine(imageFillingUpCoroutine);
 			imageFillingDownCoroutine = ImageFillingDown(image);
 			StartCoroutine(imageFillingDownCoroutine);
 		}
@@ -41,7 +42,8 @@ public class CustomButton : Selectable {
 	public override void OnPointerUp(PointerEventData eventData) {
 		base.OnPointerUp(eventData);
 		if (image.fillAmount != 1) {
-			StopCoroutine(imageFillingUpCoroutine);
+			if (imageFillingUpCoroutine != null)
+				StopCoroutine(imageFillingUpCoroutine);
 			imageFillingDownCoroutine = ImageFillingDown(image);
 			StartCoroutine(imageFillingDownCoroutine);
 		}

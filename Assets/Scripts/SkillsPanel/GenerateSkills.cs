@@ -2,6 +2,7 @@ using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using Utility;
 
@@ -34,25 +35,31 @@ public class GenerateSkills : MonoBehaviour
 
 		var rand = new System.Random();
 		var nodes = nodeProvider.GetNodeList(rand, 250, rectTransform.rect.size);
-		var linkedNodes = nodeLinker.GetLinkedNodes(nodes, rand, out var links, 10f);
-		//List<LinkedPoint> linkedSkills = 
+		var linkedNodes = nodeLinker.GetLinkedNodes(nodes, rand, out var links, 300f);
+		Dictionary<LinkedPoint, SkillCell> skills = new Dictionary<LinkedPoint, SkillCell>();
 		var sizeDelta = CellPrefab.GetComponent<RectTransform>().sizeDelta;
+		bool firstElement = true;
 		foreach (var node in linkedNodes) {
-			var skill = Instantiate(CellPrefab);
-			var skillTransform = skill.GetComponent<RectTransform>();
-			skillTransform.SetParent(transform);
-			skillTransform.anchoredPosition3D = Vector3.zero;
-			skillTransform.localScale = Vector3.one;
-			skillTransform.anchoredPosition = new Vector3(node.Point.x, node.Point.z);
-			skillTransform.sizeDelta = sizeDelta;
-			
+			var skillCell = Instantiate(CellPrefab);
+			var skillCellTransform = skillCell.GetComponent<RectTransform>();
+			skillCellTransform.SetParent(transform);
+			skillCellTransform.anchoredPosition3D = Vector3.zero;
+			skillCellTransform.localScale = Vector3.one;
+			skillCellTransform.anchoredPosition = new Vector3(node.Point.x, node.Point.z);
+			skillCellTransform.sizeDelta = sizeDelta;
+			skillCell.gameObject.SetActive(false);
+			skills.Add(node, skillCell);
+			if (firstElement) {
+				skillCell.gameObject.SetActive(true);
+				firstElement = false;
+			}
 		}
 
         foreach (var link in links)
         {
-			var line = Instantiate(skillLinkPrefab);
-			line.Initialize(link[0], link[1]);
+			skills[link[0]].AddNeighbor(skills[link[1]]);
         }
+        
 
 	}
 

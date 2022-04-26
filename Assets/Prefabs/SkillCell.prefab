@@ -63,6 +63,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 55
+  neighbors: []
+  skillLinkPrefab: {fileID: 8762284659436704114, guid: 8bbc4f0790ba6364898327500b3e8aa8, type: 3}
 --- !u!1 &4937120612812353348
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +225,19 @@ MonoBehaviour:
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4899418176588917764}
+        m_TargetAssemblyTypeName: SkillCell, Assembly-CSharp
+        m_MethodName: SkillGained
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &5025295388086880090
 CanvasRenderer:
   m_ObjectHideFlags: 0
