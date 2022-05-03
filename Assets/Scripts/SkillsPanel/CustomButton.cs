@@ -13,7 +13,6 @@ public class CustomButton : Selectable {
     private IEnumerator imageFillingUpCoroutine;
     private IEnumerator imageFillingDownCoroutine;
 	public UnityEvent onFilled = new UnityEvent();
-    //public CoroutingsAndProps coroutineScript;
 
 
     public override void OnPointerEnter(PointerEventData eventData) {

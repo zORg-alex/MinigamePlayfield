@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3596616735041413757}
   - component: {fileID: 549248609917104904}
   - component: {fileID: 8762284659436704114}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: SkillLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,3 +152,4 @@ MonoBehaviour:
   origin: {x: 0, y: 0, z: 0}
   destination: {x: 0, y: 0, z: 0}
   lineDrawSpeed: 6
+  lineWidth: 5

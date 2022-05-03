@@ -17,7 +17,7 @@ public class SkillCell : MonoBehaviour
         foreach (var n in neighbors)
         {
             var captureNeighbor = n;
-            Instantiate(skillLinkPrefab, transform.parent).Initialize(this.transform.position, n.transform.position, () => ShowCell(captureNeighbor));
+            Instantiate(skillLinkPrefab, transform.parent).Initialize(transform.position, n.transform.position, () => ShowCell(captureNeighbor));
         }
     }
 

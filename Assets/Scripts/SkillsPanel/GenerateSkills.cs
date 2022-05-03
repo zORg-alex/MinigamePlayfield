@@ -10,7 +10,6 @@ using Utility;
 public class GenerateSkills : MonoBehaviour
 {
 	public SkillCell CellPrefab;
-	public SkillLink skillLinkPrefab;
 	private RectTransform rectTransform;
 	private INodeProvider nodeProvider;
 	private INodeLinker nodeLinker;
@@ -34,8 +33,8 @@ public class GenerateSkills : MonoBehaviour
 		Utility.Utils.DestroyGameObjects(children);
 
 		var rand = new System.Random();
-		var nodes = nodeProvider.GetNodeList(rand, 250, rectTransform.rect.size);
-		var linkedNodes = nodeLinker.GetLinkedNodes(nodes, rand, out var links, 300f);
+		var nodes = nodeProvider.GetNodeList(rand, 200, rectTransform.rect.size);
+		var linkedNodes = nodeLinker.GetLinkedNodes(nodes, rand, out var links, 250);
 		Dictionary<LinkedPoint, SkillCell> skills = new Dictionary<LinkedPoint, SkillCell>();
 		var sizeDelta = CellPrefab.GetComponent<RectTransform>().sizeDelta;
 		bool firstElement = true;
