@@ -6,6 +6,9 @@ public class MoveCamera : MonoBehaviour
 {
 	InputActions input;
 	public bool isRotating;
+	[SerializeField]
+	public float sensetivity = 0.1f;
+
 	static public void MoveToPoint(Transform destination) {
 		float time = 1f;
 		GameObject camera = GameObject.Find("Main Camera");
@@ -15,22 +18,34 @@ public class MoveCamera : MonoBehaviour
 
 	private void OnEnable() {
 		input = new InputActions();
-		input.UI.Enable();
-		input.UI.Click.performed += ClickReleaseed;
+		input.Enable();
+		input.UI.RightClick.performed += ClickReleaseed;
+		input.UI.RightClick.started += ClickPressed;
 	}
 
+	private void OnDisable()
+	{
+		input.Disable();
+		input.UI.RightClick.performed -= ClickReleaseed;
+		input.UI.RightClick.started -= ClickPressed;
+	}
+
+	private void ClickPressed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+		isRotating = true;
+		StartCoroutine(Rotate());
+	}
 	private void ClickReleaseed(UnityEngine.InputSystem.InputAction.CallbackContext obj) => isRotating = false;
 
-	private void OnDisable() {
-		input.UI.Disable();
-		input.UI.Click.performed -= ClickReleaseed;
-	}
-
-	IEnumerator Drag() {
-
-
+	IEnumerator Rotate() {
+		Quaternion rotation = transform.rotation;
+		Vector3 euler = transform.eulerAngles;
 		do {
-			transform.eulerAngles = PositionFromCameraspace(Camera.main, input.UI.Point.ReadVector2(), WorldDropDistanceFromCamera);
+            Vector2 mouseDelta = input.Player.Look.ReadValue<Vector2>() * sensetivity;
+			euler += new Vector3(-mouseDelta.y, Mathf.Clamp(mouseDelta.x, -90f, 90f)); 
+			rotation *= Quaternion.Euler(Mathf.Clamp(-mouseDelta.x, -90f, 90f), -mouseDelta.y, 0);
+
+			transform.eulerAngles = euler;
 
 			yield return null;
 		} while (isRotating);
