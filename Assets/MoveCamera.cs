@@ -47,7 +47,7 @@ public class MoveCamera : MonoBehaviour
 
 			transform.eulerAngles = euler;
 
-			yield return null;
+			yield return new WaitForEndOfFrame();
 		} while (isRotating);
 		
 	}
