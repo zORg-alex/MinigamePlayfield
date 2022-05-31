@@ -18,6 +18,7 @@ public class InventoryController : MonoBehaviour
 			container = Instantiate(ItemContainerPrefab);
 			container.transform.parent = ItemRoot;
 			container.transform.localScale = Vector3.one;
+			container.transform.localRotation = Quaternion.identity;
 			container.transform.localPosition = Vector3.zero;
 		}
 		container.Push(item);
