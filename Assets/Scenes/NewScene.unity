@@ -314,7 +314,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9271900
 MonoBehaviour:
@@ -731,7 +731,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 49147441}
-  image: {fileID: 883787081}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -949,7 +949,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 62622545}
-  image: {fileID: 651186814}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -1228,7 +1228,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 75261212}
-  image: {fileID: 1494980381}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -1363,7 +1363,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 99457333}
-  image: {fileID: 1699178964}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -2093,7 +2093,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 163183977}
-  image: {fileID: 580741420}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -2266,6 +2266,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 990dfdc0273fc324daa3afc755f28fa1, type: 3}
   m_PrefabInstance: {fileID: 181237419}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &183838416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 183838417}
+  - component: {fileID: 183838418}
+  m_Layer: 0
+  m_Name: FloorCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &183838417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183838416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.434, y: 0, z: -0.03}
+  m_LocalScale: {x: 2.32, y: 0.000001, z: 4.15}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1533717534981118318}
+  m_RootOrder: 53
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &183838418
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183838416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &189855941
 GameObject:
   m_ObjectHideFlags: 0
@@ -3428,6 +3473,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312721384}
   m_CullTransparentMesh: 1
+--- !u!4 &318379657 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: c3d3001803458e7479fb32f1c5404308, type: 3}
+  m_PrefabInstance: {fileID: 1947920355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &325227221
 GameObject:
   m_ObjectHideFlags: 0
@@ -3546,7 +3596,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 325227223}
-  image: {fileID: 825060155}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -4165,7 +4215,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 370638969}
-  image: {fileID: 1602906032}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -4745,7 +4795,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 451519643}
-  image: {fileID: 1611068036}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -5741,7 +5791,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 538061361}
-  image: {fileID: 1323931713}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -6868,7 +6918,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 650062764}
-  image: {fileID: 2087949131}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -7567,7 +7617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6728071012336590881, guid: 89fed602a9116b24dafb64c8f4d7b212, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6728071012336590881, guid: 89fed602a9116b24dafb64c8f4d7b212, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8032,7 +8082,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 797470912}
-  image: {fileID: 1763589839}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -8467,7 +8517,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &867922963
 GameObject:
@@ -8587,7 +8637,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 867922965}
-  image: {fileID: 1331635496}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -8984,7 +9034,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 895321642}
-  image: {fileID: 189855942}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -9614,7 +9664,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 931672052}
-  image: {fileID: 701951002}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -9832,7 +9882,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 959058759}
-  image: {fileID: 569652463}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -9998,56 +10048,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a6e1b401bec6f541bdfa7421c000ec6, type: 3}
---- !u!1 &984954215
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 984954217}
-  - component: {fileID: 984954216}
-  m_Layer: 0
-  m_Name: AddItem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &984954216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984954215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6606307286648a4eb898c822ece654f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 6954262331154161267, guid: 68296a4aea3afbf42bc9f272fa1de63e, type: 3}
-  itemObjects:
-  - {fileID: 11400000, guid: 5e037ed53f923dc49a2cfa62a7760a32, type: 2}
-  - {fileID: 11400000, guid: dd66f20636ba042428ff461e2f69f7fd, type: 2}
-  - {fileID: 11400000, guid: 650aa4abf21c0d046b18b6d14820533b, type: 2}
-  - {fileID: 11400000, guid: 1bafc95abcb75124a8297c1458d9e068, type: 2}
---- !u!4 &984954217
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984954215}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.476, y: 0.649, z: 0.056}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &993047534
 GameObject:
   m_ObjectHideFlags: 0
@@ -10845,7 +10845,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1110377751}
-  image: {fileID: 607500992}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -12029,7 +12029,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1246911256}
-  image: {fileID: 1950559858}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -12549,7 +12549,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1290706671}
-  image: {fileID: 1980499668}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -13160,7 +13160,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1361036362
 GameObject:
@@ -13208,7 +13208,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1361036366
 MonoBehaviour:
@@ -13564,7 +13564,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1386678510}
-  image: {fileID: 373826597}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -13739,7 +13739,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1427351959}
-  image: {fileID: 376114874}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -14488,7 +14488,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1475497228}
-  image: {fileID: 1171637428}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -14889,10 +14889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 6954262331154161267, guid: 68296a4aea3afbf42bc9f272fa1de63e, type: 3}
   itemObjects:
-  - {fileID: 11400000, guid: 1bafc95abcb75124a8297c1458d9e068, type: 2}
-  - {fileID: 11400000, guid: dd66f20636ba042428ff461e2f69f7fd, type: 2}
-  - {fileID: 11400000, guid: 5e037ed53f923dc49a2cfa62a7760a32, type: 2}
-  - {fileID: 11400000, guid: 650aa4abf21c0d046b18b6d14820533b, type: 2}
+  - {fileID: 11400000, guid: ae3bbc12cbb95e641b7f030b483662ec, type: 2}
 --- !u!114 &1522522988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15314,7 +15311,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1576300588}
-  image: {fileID: 356820391}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -15436,7 +15433,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 15.53, y: -46.92, z: 0}
 --- !u!1 &1602906031
 GameObject:
@@ -15846,7 +15843,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1626155709}
-  image: {fileID: 549388048}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -15983,7 +15980,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &1649171433
 GameObject:
@@ -16605,7 +16602,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1722960174}
-  image: {fileID: 905291369}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -16966,7 +16963,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1786690242}
-  image: {fileID: 2068382221}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -17552,7 +17549,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1861614343}
-  image: {fileID: 571672955}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -17846,7 +17843,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1926735241}
-  image: {fileID: 1135844641}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -18048,7 +18045,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 17.53, y: 112.73, z: 0}
 --- !u!1 &1943607784 stripped
 GameObject:
@@ -18080,7 +18077,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1533717534981118318}
     m_Modifications:
     - target: {fileID: 100000, guid: c3d3001803458e7479fb32f1c5404308, type: 3}
       propertyPath: m_Name
@@ -18088,11 +18085,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c3d3001803458e7479fb32f1c5404308, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c3d3001803458e7479fb32f1c5404308, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.24
+      value: 0.23999994
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c3d3001803458e7479fb32f1c5404308, type: 3}
       propertyPath: m_LocalScale.y
@@ -18100,11 +18097,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c3d3001803458e7479fb32f1c5404308, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.24
+      value: 0.23999994
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c3d3001803458e7479fb32f1c5404308, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.894
+      value: -1.2138778
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c3d3001803458e7479fb32f1c5404308, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18112,19 +18109,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c3d3001803458e7479fb32f1c5404308, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2138776
+      value: -0.89400005
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c3d3001803458e7479fb32f1c5404308, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c3d3001803458e7479fb32f1c5404308, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c3d3001803458e7479fb32f1c5404308, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c3d3001803458e7479fb32f1c5404308, type: 3}
       propertyPath: m_LocalRotation.z
@@ -18564,7 +18561,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1996019714}
-  image: {fileID: 1982583158}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -19219,7 +19216,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 2070845584}
-  image: {fileID: 624525250}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -19745,7 +19742,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 2130908915}
-  image: {fileID: 1323317870}
+  buttonImage: {fileID: 0}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:
@@ -19827,6 +19824,8 @@ Transform:
   - {fileID: 475156675}
   - {fileID: 669702302}
   - {fileID: 109737651}
+  - {fileID: 183838417}
+  - {fileID: 318379657}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}

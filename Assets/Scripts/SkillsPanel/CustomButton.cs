@@ -8,7 +8,7 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class CustomButton : Selectable {
-	public UnityEngine.UI.Image image;
+	public UnityEngine.UI.Image buttonImage;
 	public float fillingSpeed = 1f;
     private IEnumerator imageFillingUpCoroutine;
     private IEnumerator imageFillingDownCoroutine;
@@ -21,29 +21,29 @@ public class CustomButton : Selectable {
 
 	public override void OnPointerExit(PointerEventData eventData) {
 		base.OnPointerExit(eventData);
-		if (image.fillAmount != 1 && image.IsActive()) {
+		if (buttonImage.fillAmount != 1 && buttonImage.IsActive()) {
 			if (imageFillingUpCoroutine != null)
 				StopCoroutine(imageFillingUpCoroutine);
-			imageFillingDownCoroutine = ImageFillingDown(image);
+			imageFillingDownCoroutine = ImageFillingDown(buttonImage);
 			StartCoroutine(imageFillingDownCoroutine);
 		}
 	}
 
 	public override void OnPointerDown(PointerEventData eventData) {
 		base.OnPointerDown(eventData);
-		if (image.IsActive())
+		if (buttonImage.IsActive())
         {
-			imageFillingUpCoroutine = ImageFillingUp(image);
+			imageFillingUpCoroutine = ImageFillingUp(buttonImage);
 			StartCoroutine(imageFillingUpCoroutine);
 		}
 	}
 
 	public override void OnPointerUp(PointerEventData eventData) {
 		base.OnPointerUp(eventData);
-		if (image.fillAmount != 1) {
+		if (buttonImage.fillAmount != 1) {
 			if (imageFillingUpCoroutine != null)
 				StopCoroutine(imageFillingUpCoroutine);
-			imageFillingDownCoroutine = ImageFillingDown(image);
+			imageFillingDownCoroutine = ImageFillingDown(buttonImage);
 			StartCoroutine(imageFillingDownCoroutine);
 		}
 	}

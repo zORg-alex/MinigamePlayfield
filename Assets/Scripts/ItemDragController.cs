@@ -55,7 +55,7 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 		rb.isKinematic = true;
 		rb.angularVelocity = Vector3.zero;
 		rb.velocity = Vector3.zero;
-		item.DrawOverUI();
+		//item.DrawOverUI();
 
 		do {
 			if (item != null)
@@ -72,7 +72,7 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 		} else {
 			rb.isKinematic = false;
 		}
-		item.NormalDrawOrder();
+		//item.NormalDrawOrder();
 	}
 
 	public Vector3 PositionFromCameraspace(Camera camera, Vector2 screenPosition, float distFromCamera) =>

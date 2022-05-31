@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f58406c10d1e14f826e158d39d3fcd, type: 3}
+  m_Name: Blade
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 4300000, guid: 0f58fb14c9c304545b75ba37a18ce658, type: 3}
+  material: {fileID: 2100000, guid: d7823f7788ad82e4ea3d2f1c45ecc7c0, type: 2}
+  sprite: {fileID: 21300000, guid: 4c49d39bd84e9204dba1ae78a0b20ff5, type: 3}
+  itemName: Unfinished Blade
+  description: Unfinished blade used to create a sword.

@@ -12,6 +12,6 @@ public class PurchaseItem : MonoBehaviour
 		Transform dropPoint = GameObject.Find("ItemDropPoint").transform;
 		var newItem = Instantiate(itemPrefab, dropPoint.position, Quaternion.identity);
 		newItem.ItemObject = itemObjects[Random.Range(0, itemObjects.Length)];
-		newItem.SetTexture();
+		//newItem.SetTexture();
 	}
 }

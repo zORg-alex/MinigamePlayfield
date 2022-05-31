@@ -2,8 +2,9 @@
 
 [CreateAssetMenu(fileName = "item", menuName = "ScriptableObjects/ItemObject", order = 1)]
 public class ItemObject : ScriptableObject {
-	public Texture2D texture;
+	public Mesh mesh;
+	public Material material;
 	public Sprite sprite;
-	public string name;
+	public string itemName;
 	public string description;
 }
