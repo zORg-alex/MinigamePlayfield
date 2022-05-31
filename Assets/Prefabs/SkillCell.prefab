@@ -221,7 +221,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 4103636359145289392}
-  image: {fileID: 6527858546236059703}
+  buttonImage: {fileID: 6527858546236059703}
   fillingSpeed: 1
   onFilled:
     m_PersistentCalls:

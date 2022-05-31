@@ -34,8 +34,8 @@ public class SkillLink : MonoBehaviour
 
     public void Initialize(Vector3 a, Vector3 b, System.Action onCompleted)
     {
-        origin = a;
-        destination = b;
+        origin = transform.InverseTransformPoint(a) + Vector3.forward * 10f;
+        destination = transform.InverseTransformPoint(b) + Vector3.forward * 10f;
         this.onCompleted = onCompleted;
     }
 }
