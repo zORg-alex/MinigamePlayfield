@@ -7486,18 +7486,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1797809266, guid: 89fed602a9116b24dafb64c8f4d7b212, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1522522987}
-    - target: {fileID: 1797809266, guid: 89fed602a9116b24dafb64c8f4d7b212, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickPurchaseItem
-      objectReference: {fileID: 0}
-    - target: {fileID: 1797809266, guid: 89fed602a9116b24dafb64c8f4d7b212, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PurchaseItem, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 1072989638508035826, guid: 89fed602a9116b24dafb64c8f4d7b212, type: 3}
       propertyPath: m_IsActive
       value: 1
