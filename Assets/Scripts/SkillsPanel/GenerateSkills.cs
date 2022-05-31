@@ -44,6 +44,7 @@ public class GenerateSkills : MonoBehaviour
 			skillCellTransform.SetParent(transform);
 			skillCellTransform.anchoredPosition3D = Vector3.zero;
 			skillCellTransform.localScale = Vector3.one;
+			skillCellTransform.localRotation = Quaternion.identity;
 			skillCellTransform.anchoredPosition = new Vector3(node.Point.x, node.Point.z);
 			skillCellTransform.sizeDelta = sizeDelta;
 			skillCell.gameObject.SetActive(false);
