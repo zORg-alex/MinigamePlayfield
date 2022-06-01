@@ -21,28 +21,35 @@ public class Item : MonoBehaviour {
     private int DrawOrder;
 
     private void OnEnable() {
-       // sr = GetComponentInChildren<SpriteRenderer>();
         mf = GetComponentInChildren<MeshFilter>();
         mr = GetComponentInChildren<MeshRenderer>();
-        // if (sr != null) 
-        // DrawOrder = sr.sharedMaterial.renderQueue;
-        if (mf != null)
-            mf.sharedMesh = _itemObject.mesh;
         mc = GetComponentInChildren<MeshCollider>();
-        mc.sharedMesh = _itemObject.mesh;
-        mc.convex.Equals(true);
-        mr.sharedMaterial = _itemObject.material;
+        if (mf != null && mr != null && mc != null ) {
+            mf.sharedMesh = _itemObject.mesh;
+            mc.sharedMesh = _itemObject.mesh;
+            mc.convex.Equals(true);
+            mr.sharedMaterial = _itemObject.material;
+            DrawOrder = mr.sharedMaterial.renderQueue;
+        }     
 	}
 
-	/*[Button]
+	[Button]
     public void SetTexture() {
-        sr.sprite = ItemObject.sprite;
+        mf = GetComponentInChildren<MeshFilter>();
+        mr = GetComponentInChildren<MeshRenderer>();
+        mc = GetComponentInChildren<MeshCollider>();
+        if (mf != null && mr != null && mc != null) {
+            mf.sharedMesh = _itemObject.mesh;
+            mc.sharedMesh = _itemObject.mesh;
+            mc.convex.Equals(true);
+            mr.sharedMaterial = _itemObject.material;
+        }
     }
 
     public void DrawOverUI() {
-        sr.sharedMaterial.renderQueue++;
+        mr.sharedMaterial.renderQueue++;
     }
     public void NormalDrawOrder() {
-        sr.sharedMaterial.renderQueue = DrawOrder;
-	}*/
+        mr.sharedMaterial.renderQueue = DrawOrder;
+	}
 }

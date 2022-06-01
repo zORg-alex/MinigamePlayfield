@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mesh: {fileID: 4300000, guid: 0f58fb14c9c304545b75ba37a18ce658, type: 3}
   material: {fileID: 2100000, guid: d7823f7788ad82e4ea3d2f1c45ecc7c0, type: 2}
-  sprite: {fileID: 21300000, guid: 4c49d39bd84e9204dba1ae78a0b20ff5, type: 3}
+  sprite: {fileID: 21300000, guid: 5808c8950bc221944bfab588e143bb6b, type: 3}
   itemName: Unfinished Blade
   description: Unfinished blade used to create a sword.

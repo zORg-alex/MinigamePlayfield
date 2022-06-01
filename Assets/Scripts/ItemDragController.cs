@@ -8,7 +8,8 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 {
 	InputActions input;
 	public Canvas canvas;
-	public float WorldDropDistanceFromCamera = .7f;
+	[SerializeField]
+	public float WorldDropDistanceFromCamera = .5f;
 	private void OnEnable() {
 		input = new InputActions();
 		input.UI.Enable();
@@ -52,15 +53,19 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 
 	IEnumerator Drag(Item item) {
 		var rb = item.GetComponent<Rigidbody>();
-		rb.isKinematic = true;
+		rb.isKinematic = false;
+		rb.rotation = Quaternion.identity;
+		rb.useGravity = false;
 		rb.angularVelocity = Vector3.zero;
 		rb.velocity = Vector3.zero;
-		//item.DrawOverUI();
+		item.DrawOverUI();
 
 		do {
-			if (item != null)
-				item.transform.position = PositionFromCameraspace(Camera.main, input.UI.Point.ReadVector2(), WorldDropDistanceFromCamera);
-
+			if (rb != null)
+				rb.MovePosition(PositionFromCameraspace(Camera.main, input.UI.Point.ReadVector2(), WorldDropDistanceFromCamera));
+			rb.rotation = Quaternion.identity;
+			rb.angularVelocity = Vector3.zero;
+			rb.velocity = Vector3.zero;
 			yield return null;
 		} while (isDragging);
 		//If over Inventory
@@ -71,8 +76,9 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 			ic.Push(item);
 		} else {
 			rb.isKinematic = false;
+			rb.useGravity = true;
 		}
-		//item.NormalDrawOrder();
+		item.NormalDrawOrder();
 	}
 
 	public Vector3 PositionFromCameraspace(Camera camera, Vector2 screenPosition, float distFromCamera) =>
