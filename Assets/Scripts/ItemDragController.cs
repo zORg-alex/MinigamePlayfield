@@ -61,8 +61,12 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 		item.DrawOverUI();
 
 		do {
-			if (rb != null)
-				rb.MovePosition(PositionFromCameraspace(Camera.main, input.UI.Point.ReadVector2(), WorldDropDistanceFromCamera));
+			if (rb != null) {
+				var newPosition = PositionFromCameraspace(Camera.main, input.UI.Point.ReadVector2(), WorldDropDistanceFromCamera);
+				if (newPosition.y < 0) newPosition.y = 0;
+				rb.MovePosition(newPosition);
+			}
+				
 			rb.rotation = Quaternion.identity;
 			rb.angularVelocity = Vector3.zero;
 			rb.velocity = Vector3.zero;
