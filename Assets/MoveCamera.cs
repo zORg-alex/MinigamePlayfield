@@ -9,11 +9,11 @@ public class MoveCamera : MonoBehaviour
 	[SerializeField]
 	public float sensetivity = 0.1f;
 
-	static public void MoveToPoint(Transform destination) {
+	static public void MoveToPoint(Vector3 position, Quaternion rotation) {
 		float time = 1f;
 		GameObject camera = GameObject.Find("Main Camera");
-		LeanTween.move(camera, destination, time);
-		LeanTween.rotate(camera, destination.eulerAngles, time);
+		LeanTween.move(camera, position, time);
+		LeanTween.rotate(camera, rotation.eulerAngles, time);
 	}
 
 	private void OnEnable() {
