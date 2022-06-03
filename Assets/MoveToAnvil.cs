@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MoveToAnvil : MonoBehaviour
 {
-    public void OnClickMoveCameraToAnvil() {
-		Transform viewPoint = GameObject.Find("AnvilViewPoint").transform;
-		MoveCamera.MoveToPoint(viewPoint);
+	public PositionCollection pc;
+	public void OnClickMoveCameraToAnvil() {
+		MoveCamera.MoveToPoint(pc.GetPoint("AnvilViewPoint", out var rotation), rotation);
 	}
 }

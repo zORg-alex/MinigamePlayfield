@@ -187,6 +187,8 @@ MonoBehaviour:
   DefaultDistance: 0
   WeightCof: 0
   DistanceCof: 0
+  NumberOfConnections: 4
+  MinNumberOfConnections: 2
 --- !u!114 &1154847622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +216,7 @@ MonoBehaviour:
         UnityEngine.CoreModule],[System.Single, mscorlib]], mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 17
+      Data: 27
     - Name: 
       Entry: 7
       Data: System.ValueTuple`2[[UnityEngine.Vector3, UnityEngine.CoreModule],[System.Single,
@@ -236,7 +238,7 @@ MonoBehaviour:
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.6314919
+      Data: 0.210457638
     - Name: 
       Entry: 8
       Data: 
@@ -249,19 +251,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 1112.76233
+      Data: 645.624
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 613.1006
+      Data: 708.727051
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.309476465
+      Data: 0.09810724
     - Name: 
       Entry: 8
       Data: 
@@ -274,19 +276,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 1087.21179
+      Data: 1036.71436
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 261.151733
+      Data: 637.45166
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.140934169
+      Data: 0.6881195
     - Name: 
       Entry: 8
       Data: 
@@ -299,19 +301,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 1301.99915
+      Data: 975.599
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 435.074524
+      Data: 844.9476
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.2572661
+      Data: 0.329290122
     - Name: 
       Entry: 8
       Data: 
@@ -324,19 +326,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 692.231262
+      Data: 1328.89465
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 86.95987
+      Data: 871.006165
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.206006587
+      Data: 0.371382326
     - Name: 
       Entry: 8
       Data: 
@@ -349,19 +351,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 524.8244
+      Data: 1346.85168
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 350.524658
+      Data: 626.9838
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.3212901
+      Data: 0.712584734
     - Name: 
       Entry: 8
       Data: 
@@ -374,19 +376,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 321.727661
+      Data: 1087.392
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 97.19832
+      Data: 393.489563
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.342355728
+      Data: 0.231090441
     - Name: 
       Entry: 8
       Data: 
@@ -399,19 +401,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 1059.38037
+      Data: 1594.45654
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 873.3387
+      Data: 742.0785
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.3595585
+      Data: 0.137785971
     - Name: 
       Entry: 8
       Data: 
@@ -424,19 +426,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 1387.15625
+      Data: 1275.75269
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 844.2687
+      Data: 295.651
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.8297034
+      Data: 0.468245238
     - Name: 
       Entry: 8
       Data: 
@@ -449,19 +451,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 690.589844
+      Data: 1601.82581
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 727.6428
+      Data: 510.356964
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.6756849
+      Data: 0.0611445419
     - Name: 
       Entry: 8
       Data: 
@@ -474,19 +476,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 1499.178
+      Data: 1653.37866
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 605.4022
+      Data: 212.936554
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.69608134
+      Data: 0.0347316526
     - Name: 
       Entry: 8
       Data: 
@@ -499,19 +501,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 1564.86572
+      Data: 669.8734
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 187.716522
+      Data: 373.076416
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.7565936
+      Data: 0.701306343
     - Name: 
       Entry: 8
       Data: 
@@ -524,19 +526,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 254.0369
+      Data: 961.110352
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 489.7442
+      Data: 126.461166
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.60874784
+      Data: 0.2610892
     - Name: 
       Entry: 8
       Data: 
@@ -549,19 +551,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 367.2014
+      Data: 778.6825
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 767.1139
+      Data: 894.342651
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.333964825
+      Data: 0.602357566
     - Name: 
       Entry: 8
       Data: 
@@ -574,19 +576,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 1318.72083
+      Data: 1365.36865
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 133.321808
+      Data: 97.0683441
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.7745706
+      Data: 0.7045844
     - Name: 
       Entry: 8
       Data: 
@@ -599,19 +601,19 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 74.6129
+      Data: 1464.438
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 786.7787
+      Data: 364.282745
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.5282104
+      Data: 0.3728039
     - Name: 
       Entry: 8
       Data: 
@@ -624,19 +626,269 @@ MonoBehaviour:
       Data: UnityEngine.Vector3, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 74.01163
+      Data: 607.2567
     - Name: 
       Entry: 4
       Data: 0
     - Name: 
       Entry: 4
-      Data: 180.359131
+      Data: 150.76358
     - Name: 
       Entry: 8
       Data: 
     - Name: Item2
       Entry: 4
-      Data: 0.5676717
+      Data: 0.2781258
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[UnityEngine.Vector3, UnityEngine.CoreModule],[System.Single,
+        mscorlib]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1158.87756
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 78.46704
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0.69493854
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[UnityEngine.Vector3, UnityEngine.CoreModule],[System.Single,
+        mscorlib]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 380.1744
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 883.259
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0.338622868
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[UnityEngine.Vector3, UnityEngine.CoreModule],[System.Single,
+        mscorlib]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 449.451477
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 350.135376
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0.674816847
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[UnityEngine.Vector3, UnityEngine.CoreModule],[System.Single,
+        mscorlib]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 344.801544
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 670.541931
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0.172332
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[UnityEngine.Vector3, UnityEngine.CoreModule],[System.Single,
+        mscorlib]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 389.946838
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 107.160141
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0.277102768
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[UnityEngine.Vector3, UnityEngine.CoreModule],[System.Single,
+        mscorlib]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 130.981369
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 695.736938
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0.445557028
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[UnityEngine.Vector3, UnityEngine.CoreModule],[System.Single,
+        mscorlib]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 93.48642
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 489.5829
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0.07842173
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[UnityEngine.Vector3, UnityEngine.CoreModule],[System.Single,
+        mscorlib]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 251.534668
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 259.146118
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0.2915403
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[UnityEngine.Vector3, UnityEngine.CoreModule],[System.Single,
+        mscorlib]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 113.2724
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 103.698021
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0.6709416
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: System.ValueTuple`2[[UnityEngine.Vector3, UnityEngine.CoreModule],[System.Single,
+        mscorlib]], mscorlib
+    - Name: Item1
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 531.79126
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 542.0714
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Item2
+      Entry: 4
+      Data: 0.6987501
     - Name: 
       Entry: 8
       Data: 
@@ -1255,8 +1507,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6728071012417082287}
-  - component: {fileID: 6728071012417082285}
-  - component: {fileID: 6728071012417082284}
   m_Layer: 5
   m_Name: SidePanel
   m_TagString: Untagged
@@ -1285,44 +1535,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &6728071012417082285
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6728071012417082286}
-  m_CullTransparentMesh: 1
---- !u!114 &6728071012417082284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6728071012417082286}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1001 &6478597400293678168
 PrefabInstance:
   m_ObjectHideFlags: 0
