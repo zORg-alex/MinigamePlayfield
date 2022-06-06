@@ -34,9 +34,9 @@ public class QTEArcController : MonoBehaviour
 	public bool curDirectionPositive;
 	public bool active;
 
-	private InputActions input;
+	protected InputActions input;
 
-	private void OnEnable() {
+	protected void OnEnable() {
 		input = new InputActions();
 		input.QTE.Enable();
 		if (Application.isPlaying) {
@@ -48,7 +48,7 @@ public class QTEArcController : MonoBehaviour
 		curPosition = curInitialPosition;
 		curDirectionPositive = curInitialDirectionPositive;
 	}
-	private void OnDisable() {
+	protected void OnDisable() {
 		input.QTE.Disable();
 	}
 

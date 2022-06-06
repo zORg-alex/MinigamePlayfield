@@ -6,7 +6,7 @@ using UnityEngine;
 public class UseCalipers : MonoBehaviour
 {
     public GameObject bone1;
-    public GameObject bone2;
+    public Transform itemPosition;
 
 	[Button]
     public  void OpenAndTightenCalipers() {

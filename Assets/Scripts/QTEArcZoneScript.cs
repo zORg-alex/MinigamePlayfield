@@ -85,7 +85,7 @@ public class QTEArcZoneScript : MonoBehaviour {
 		pos < MinMax.y - Falloff / 2 ? true : false;
 
 	public bool isOver;
-	private float lastPosition;
+	public float lastPosition;
 	public void SetCurrentPos(float pos) {
 		lastPosition = pos;
 		isOver = IsOver(pos);

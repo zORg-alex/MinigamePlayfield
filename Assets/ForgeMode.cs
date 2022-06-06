@@ -8,8 +8,11 @@ public class ForgeMode : BaseMode {
 	public PositionCollection itemPC;
 	public float time = 1f;
 	public ItemDragController dragController;
-	public GameObject caliperPrefab;
+	public UseCalipers calipers;
 	public Camera mainCamera;
+	public Transform caliperRestPoint;
+	public Transform caliperWorkPoint;
+	public BellowsBehaviour bellow;
 
 	public override void OnEndMode() {
 		throw new System.NotImplementedException();
@@ -19,25 +22,21 @@ public class ForgeMode : BaseMode {
 		float time = 1f;
 		var currentItem = GetCurrentItem().gameObject;
 		Quaternion mainCameraItemViewRotation = mainCamera.transform.rotation * Quaternion.Euler(0, 170, 90);
-		//moving to look at the mesh
-		MoveCamera.MoveToPoint(cameraPC.GetPoint("LookAtMeshPoint", out var lookAtMeshRotation), lookAtMeshRotation);
-		LeanTween.move(currentItem, PositionFromCameraspace(mainCamera, new Vector2(Screen.width/2,Screen.height/2), 0.5f), time);
-		LeanTween.rotate(currentItem, mainCameraItemViewRotation.eulerAngles, time);
-		BellowsBehaviour.PressMeshAnimation();
-
-		//moving to the forge
-		MoveCamera.MoveToPoint(cameraPC.GetPoint("ForgeModeMain", out var mainRotation), mainRotation);
-
-		Vector3 caliperSpawnPosition = mainCamera.transform.position;
-		caliperSpawnPosition.y -= 0.2f ;
-		var caliper = Instantiate(caliperPrefab, caliperSpawnPosition, mainCameraItemViewRotation);
-		LeanTween.move(caliper, currentItem.transform.GetChild(0).transform.position, time);
-
-		LeanTween.move(currentItem, itemPC.GetPoint("ForgeItemModePoint", out var itemRotation), time);
-		LeanTween.rotate(currentItem, itemRotation.eulerAngles, time);
+		//moving to forge
+		MoveCamera.MoveToPoint(cameraPC.GetPoint("ForgeModeMain", out var lookAtMeshRotation), lookAtMeshRotation);
+		LeanTween.move(calipers.gameObject, caliperWorkPoint, time);
+		calipers.OpenAndTightenCalipers();
+		LeanTween.move(currentItem, calipers.itemPosition, time + .1f)
+			.setOnComplete( () => currentItem.transform.SetParent(calipers.itemPosition) );
 		
+		//look at bellows
+		//MoveCamera.MoveToPoint(cameraPC.GetPoint("LookAtBellowsPoint", out var mainRotation), mainRotation, time + .3f);
+		bellow.IsWorking = true;
+
+		//look at forge 
+		//MoveCamera.MoveToPoint(cameraPC.GetPoint("ForgeModeMain", out var lookAtMeshRotation), lookAtMeshRotation, time + time);
 		//turning on QTE
-		GameObject.Find("QTE Arc").gameObject.SetActive(true);
+		
 
 		
 	}
@@ -52,4 +51,10 @@ public class ForgeMode : BaseMode {
 
 	public Vector3 PositionFromCameraspace(Camera camera, Vector2 screenPosition, float distFromCamera) =>
 		camera.ScreenToWorldPoint((Vector3)screenPosition + Vector3.forward * distFromCamera);
+
+	public void OnTriggerEnter((Collider @this, Collider other) e) {
+		//TODO check if other is expected item
+		if (!GetCurrentItem()) return;
+		StartMode();
+	}
 }
