@@ -20,15 +20,11 @@ public class ModeController : MonoBehaviour
 		}
 	}
 
-	private void Start() {
-		//currentMode.StartMode(item);
-
-	}
-	public void StartMode(BaseMode mode, Item item) {
+	public void StartMode(BaseMode mode) {
 		if (currentMode && !currentMode.AllowSwitchMode()) return;
 		currentMode?.EndMode();
 		currentMode = mode;
-		currentMode?.StartMode(item);
+		currentMode?.StartMode();
 	}
 
 

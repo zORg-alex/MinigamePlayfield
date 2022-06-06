@@ -8,6 +8,7 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 {
 	InputActions input;
 	public Canvas canvas;
+	public Item currentItem;
 	[SerializeField]
 	public float WorldDropDistanceFromCamera = .5f;
 	private void OnEnable() {
@@ -34,6 +35,7 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 			isDragging = true;
 			var item = ItemContainer.Pop();
 			StartCoroutine(Drag(item));
+			currentItem = item;
 			Debug.Log("ItemContainer Clicked");
 			return;
 		} 
@@ -45,6 +47,7 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 		if (item != null) {
 			isDragging = true;
 			StartCoroutine(Drag(item));
+			currentItem = item;
 			Debug.Log("Item Clicked");
 			return;
 		}
@@ -78,6 +81,7 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 			.Select(rt => rt.GetComponent<InventoryController>()).FirstOrDefault(ic => ic != null)
 			is InventoryController ic) {
 			ic.Push(item);
+			currentItem = null;
 		} else {
 			rb.isKinematic = false;
 			rb.useGravity = true;
@@ -87,4 +91,6 @@ public class ItemDragController : Designs.Singleton<ItemDragController>
 
 	public Vector3 PositionFromCameraspace(Camera camera, Vector2 screenPosition, float distFromCamera) =>
 		camera.ScreenToWorldPoint((Vector3)screenPosition + Vector3.forward * distFromCamera);
+
+
 }

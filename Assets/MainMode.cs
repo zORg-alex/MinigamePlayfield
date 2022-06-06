@@ -7,7 +7,7 @@ public class MainMode : BaseMode {
 		UIPanel.gameObject.SetActive(false);
 	}
 
-	public override void OnStartMode(Item item) {
+	public override void OnStartMode() {
 		UIPanel.gameObject.SetActive(true);
 	}
 }

@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
 public abstract class BaseMode : MonoBehaviour {
-	public abstract void OnStartMode(Item item);
+	public abstract void OnStartMode();
 	
 	public abstract void OnEndMode();
 
-	public void StartMode(Item item) {
+	public void StartMode() {
 		isCurrent = true;
-		OnStartMode(item);
+		OnStartMode();
 	}
 
 	public void EndMode() {
