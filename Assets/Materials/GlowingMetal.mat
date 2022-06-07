@@ -27,7 +27,7 @@ Material:
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 0
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -118,7 +118,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _GlowMaxAmount: 0.85
+    - _GlowMaxAmount: 0
     - _GlowMinAmount: 0
     - _Metallic: 0
     - _Mode: 0

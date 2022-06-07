@@ -89,7 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d92efe1618289544a8cf6f4991166136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemObject: {fileID: 11400000, guid: 93d514fda2b79cc41963e6c9a7d217c6, type: 2}
+  material: {fileID: 2100000, guid: f7b92343806aa7e49b940494bcdc4bb3, type: 2}
+  temperatureDelta: 1
 --- !u!114 &6954262331154161265
 MonoBehaviour:
   m_ObjectHideFlags: 0

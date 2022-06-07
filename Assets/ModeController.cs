@@ -9,6 +9,7 @@ public class ModeController : MonoBehaviour
 
 	public List<BaseMode> registeredModes = new List<BaseMode>();
 	public BaseMode currentMode;
+	public MainMode mainMode; 
 	private void OnEnable() {
 		// If there is an instance, and it's not me, delete myself.
 		if (Instance != null && Instance != this) {
@@ -18,6 +19,13 @@ public class ModeController : MonoBehaviour
 			Instance = this;
 			DontDestroyOnLoad(gameObject);
 		}
+	}
+
+	public void StopMode() {
+		if (currentMode == mainMode && !currentMode.AllowSwitchMode()) return;
+		currentMode?.EndMode();
+		currentMode = mainMode;
+		currentMode?.StartMode();
 	}
 
 	public void StartMode(BaseMode mode) {

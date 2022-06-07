@@ -9,37 +9,84 @@ public class ForgeMode : BaseMode {
 	public float time = 1f;
 	public ItemDragController dragController;
 	public UseCalipers calipers;
-	public Camera mainCamera;
 	public Transform caliperRestPoint;
 	public Transform caliperWorkPoint;
 	public BellowsBehaviour bellow;
+	public RectTransform UIPanel;
+	public InventoryController ic;
+
+	private Item currentItem;
 
 	public override void OnEndMode() {
-		throw new System.NotImplementedException();
+		bellow.IsWorking = false;
+		UIPanel.gameObject.SetActive(false);
+		StopAllCoroutines();
+
+		LeanTween.move(calipers.gameObject, caliperRestPoint, time);
+		LeanTween.rotate(calipers.gameObject, caliperRestPoint.rotation.eulerAngles, time);
+		//currentItem.transform.SetParent();
+		LeanTween.move(currentItem.gameObject, new Vector3( Screen.mainWindowPosition.x + Screen.width, Screen.mainWindowPosition.y, Camera.main.transform.position.z), time + .1f)
+			.setOnComplete(() => {
+				ic.Push(currentItem);
+				currentItem = null;
+			});
 	}
 
 	public override void OnStartMode() {
-		float time = 1f;
-		var currentItem = GetCurrentItem().gameObject;
-		Quaternion mainCameraItemViewRotation = mainCamera.transform.rotation * Quaternion.Euler(0, 170, 90);
-		//moving to forge
-		MoveCamera.MoveToPoint(cameraPC.GetPoint("ForgeModeMain", out var lookAtMeshRotation), lookAtMeshRotation);
+		float time = 1.5f;
+		 currentItem = GetCurrentItem();
+		//moving to camera forge
+		MoveCamera.MoveToPoint(cameraPC.GetPoint("ForgeModeMain", out var lookAtMeshRotation), lookAtMeshRotation, time);
+		//moving calipers into work place
 		LeanTween.move(calipers.gameObject, caliperWorkPoint, time);
-		calipers.OpenAndTightenCalipers();
-		LeanTween.move(currentItem, calipers.itemPosition, time + .1f)
-			.setOnComplete( () => currentItem.transform.SetParent(calipers.itemPosition) );
-		
-		//look at bellows
-		//MoveCamera.MoveToPoint(cameraPC.GetPoint("LookAtBellowsPoint", out var mainRotation), mainRotation, time + .3f);
-		bellow.IsWorking = true;
+		LeanTween.rotate(calipers.gameObject, caliperWorkPoint.rotation.eulerAngles, time)
+			.setOnComplete(() => {
+				calipers.OpenAndTightenCalipers();
+				bellow.IsWorking = true;
+			});
 
-		//look at forge 
-		//MoveCamera.MoveToPoint(cameraPC.GetPoint("ForgeModeMain", out var lookAtMeshRotation), lookAtMeshRotation, time + time);
+		//moving item into work place
+		LeanTween.move(currentItem.gameObject, calipers.itemPosition , time + .1f)
+			.setOnComplete(() => {
+				currentItem.transform.SetParent(calipers.itemPosition);
+				currentItem.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+				currentItem.isHeating = true;
+				StartCoroutine(ItemHeating());
+			});
+
 		//turning on QTE
+
+		UIPanel.gameObject.SetActive(true);
+	}
+
+	IEnumerator ItemHeating() {
+		yield return new WaitForSeconds(1.5f);
+		Debug.Log("Starting to heat the item");
+		Vector3 calipersPosition = calipers.transform.position;
+		float startPoint = calipersPosition.z;
+		float endPoint = startPoint + 0.22f;
+		float movingCalipersSpeed = 0.001f;
 		
 
 		
+		while (currentItem.temperature < 1500) {
+			if (calipers.transform.position.z > endPoint || calipers.transform.position.z < startPoint)
+				movingCalipersSpeed = -movingCalipersSpeed;
+			calipers.transform.position = new Vector3(calipersPosition.x, calipersPosition.y, calipers.transform.position.z + movingCalipersSpeed);
+
+			yield return null;
+		}
+		ModeController.Instance.StopMode();
+
 	}
+
+	private void Update() {
+		if (Input.GetKeyUp(KeyCode.Escape)) {
+			Debug.Log("Escape key was released");
+			ModeController.Instance.StopMode();
+		}
+	}
+
 
 	public Item GetCurrentItem() {
 		if (dragController.isDragging) {
@@ -49,12 +96,8 @@ public class ForgeMode : BaseMode {
 		else return null;
 	}
 
-	public Vector3 PositionFromCameraspace(Camera camera, Vector2 screenPosition, float distFromCamera) =>
-		camera.ScreenToWorldPoint((Vector3)screenPosition + Vector3.forward * distFromCamera);
-
-	public void OnTriggerEnter((Collider @this, Collider other) e) {
-		//TODO check if other is expected item
-		if (!GetCurrentItem()) return;
-		StartMode();
+	public void OnTriggerEnterForgeMode((Collider @this, Collider other) e) {
+		if (!GetCurrentItem() || GetCurrentItem().temperature > 1500) return;
+		ModeController.Instance.StartMode(this);
 	}
 }

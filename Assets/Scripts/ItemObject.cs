@@ -7,4 +7,8 @@ public class ItemObject : ScriptableObject {
 	public Sprite sprite;
 	public string itemName;
 	public string description;
+	public float temperature;
+	public string metal;
+	[Range(0,1)]
+	public float solidStructure;
 }

@@ -13,7 +13,7 @@ public class UseCalipers : MonoBehaviour
 
         float time = 0.5f;
         float downAngle = 240f;
-        float upAngle = 245f;
+        float upAngle = 250f;
         LeanTween.rotateZ(bone1, -downAngle, time).setOnComplete(() => { LeanTween.rotateZ(bone1, -upAngle, time); });
     }
 }
