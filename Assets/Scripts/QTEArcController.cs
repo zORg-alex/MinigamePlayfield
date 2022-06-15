@@ -71,7 +71,7 @@ public class QTEArcController : MonoBehaviour
 				curDirectionPositive = !curDirectionPositive;
 			}
 			foreach (var z in zones) {
-				z.SetCurrentPos(curPosition);
+				z.SetCurrentPos(1 - curPosition/visibleArcAngle);
 			}
 		}
 		if (cursor.activeSelf != active && Application.isPlaying) {

@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -78,30 +80,30 @@ public class QTEArcZoneScript : MonoBehaviour {
 	pos < MinMax.y + Falloff / 2 ? 1 - (pos - MinMax.y + Falloff / 2) / Falloff : 0f;
 
 	public bool IsOver(float pos) =>
-		pos < MinMax.x - Falloff / 2 ? false :
-		pos < MinMax.y + Falloff / 2 ? true : false;
+		(pos <= MinMax.y + Falloff / 2) && (pos > MinMax.x - Falloff / 2);
 	public bool IsPerfect(float pos) =>
-		pos < MinMax.x + Falloff / 2 ? false :
-		pos < MinMax.y - Falloff / 2 ? true : false;
+		(pos <= MinMax.y - Falloff / 2) && (pos > MinMax.x + Falloff / 2);
 
 	public bool isOver;
+	public bool isPerfect;
 	public float lastPosition;
 	public void SetCurrentPos(float pos) {
 		lastPosition = pos;
 		isOver = IsOver(pos);
+		isPerfect = IsPerfect(pos);
 	}
 
+	public delegate void ZoneInteractionHandler(bool isOver, bool isPerfect);
+	public event ZoneInteractionHandler OnHit;
 
-	public delegate void ZoneHitHandler(QTEArcZoneScript sender, float precision);
-	public event ZoneHitHandler OnHit;
-	public delegate void ZoneInteractionHandler(QTEArcZoneScript sender);
-	public event ZoneInteractionHandler OnZoneEnter;
-	public event ZoneInteractionHandler OnZoneExit;
+	[Serializable]
+	public class IsOverIsPerfectEvent : UnityEvent<bool, bool> { }
+	public IsOverIsPerfectEvent OnHitEvent = new IsOverIsPerfectEvent();
 
 	public InputAction activationAction;
 	public QTEArcController controller;
 	private void ActivationAction_performed(InputAction.CallbackContext ctx) {
-		OnHit.Invoke(this, GetGradAlpha(controller.curPosition));
+		OnHit.Invoke(isOver, isPerfect);
+		OnHitEvent.Invoke(isOver, isPerfect);
 	}
-
 }
