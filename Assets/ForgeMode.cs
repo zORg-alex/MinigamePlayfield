@@ -25,7 +25,7 @@ public class ForgeMode : BaseMode {
 		LeanTween.move(calipers.gameObject, caliperRestPoint, time);
 		LeanTween.rotate(calipers.gameObject, caliperRestPoint.rotation.eulerAngles, time);
 		//currentItem.transform.SetParent();
-		LeanTween.move(currentItem.gameObject, new Vector3( Screen.mainWindowPosition.x + Screen.width, Screen.mainWindowPosition.y, Camera.main.transform.position.z), time + .1f)
+		LeanTween.move(currentItem.gameObject, new Vector3( Camera.main.transform.position.x , Camera.main.transform.position.y - .15f, Camera.main.transform.position.z), time + 1.1f)
 			.setOnComplete(() => {
 				ic.Push(currentItem);
 				currentItem = null;

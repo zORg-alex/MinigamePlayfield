@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BaseMode">
+    <Position X="3.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAIAAABAAQAEAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\BaseMode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ForgeMode">
+    <Position X="2.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARBAAAEAAAFAAAVAAEAAFAAAACAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\ForgeMode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMode">
+    <Position X="4.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAABAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\MainMode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModeController">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgAAAAAAAQAAAAABAAAAAAAAAAAAACAAQAAAAAAACAA=</HashCode>
+      <FileName>Assets\ModeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Item">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAAAAAQoAAABAABAAAASgAAgAggAQAAAhACAA=</HashCode>
+      <FileName>Assets\Scripts\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemObject">
+    <Position X="12" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAIAAACAAAABABAAAAAAQAAABAAAg=</HashCode>
+      <FileName>Assets\Scripts\ItemObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PoissonNodeGenerator">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAgAAAAgAAAAAoAAAAAQAAAAAAAAAAQAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillsPanel\PoissonNodeGenerator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.252" />
+  </Class>
+  <Class Name="GenerateSkills">
+    <Position X="7.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACAAAAAAAAAEAAAAAAAAAAAAIAAAAEAgCAA=</HashCode>
+      <FileName>Assets\Scripts\SkillsPanel\GenerateSkills.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClosestNodeLinker">
+    <Position X="8.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAKAAAgAAgAAQIAAAAAAAAAEAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\SkillsPanel\ClosestNodeLinker.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="INodeProvider">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillsPanel\INodeProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="INodeLinker">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SkillsPanel\INodeLinker.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

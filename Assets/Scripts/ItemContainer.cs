@@ -15,6 +15,7 @@ public class ItemContainer : MonoBehaviour {
 
 	public Image ItemIcon;
 	public Text counter;
+	private float temperature;
 
 	public void Push(Item item) {
 		if (count == 0) {
@@ -23,6 +24,7 @@ public class ItemContainer : MonoBehaviour {
 			item.transform.localPosition = Vector3.zero;
 			item.transform.localRotation = Quaternion.identity;
 			this.item = item;
+			temperature = item.temperature;
 			SetIconTexture();
 		} else {
 			Destroy(item.gameObject);
@@ -40,11 +42,13 @@ public class ItemContainer : MonoBehaviour {
 			newItem = item;
 			item.transform.parent = null;
 			item.gameObject.SetActive(true);
+			item.temperature = temperature;
 			Destroy(gameObject);//Or move to Update, if it's not working
 		} else {
 			newItem = Instantiate(item);
 			newItem.transform.localScale = Vector3.one;
 			newItem.gameObject.SetActive(true);
+			newItem.temperature = temperature;
 		}
 		return newItem;
 	}
